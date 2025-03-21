@@ -1,5 +1,67 @@
 ---
+import Button from "./Button.astro";
+import Link from "../components/Link.astro";
+import { useState } from "react";
 ---
-<div>
-Header - tilføj navigation mm.
-</div>
+
+<header
+  class="bg-cream border-b border-blue-900 py-5 px-6 lg:px-0 relative z-20"
+>
+  <div class="container mx-auto flex justify-between items-center relative">
+    <!-- Logo -->
+    <div></div>
+
+    <!-- Navigation -->
+    <div class="container mx-auto flex justify-between items-center relative">
+      <nav
+        class="flex flex-1 justify-end items-center space-x-6 font-medium text-blue-900"
+      >
+        <a href="#vaer-med" class="scroll-link">VÆR MED</a>
+        <a href="#shop" class="scroll-link">SHOP</a>
+        <a href="#om-os" class="scroll-link">OM OS</a>
+        <Button />
+        <!-- Burger menu til mobil -->
+        <button id="menu-toggle" class="lg:hidden flex flex-col space-y-1">
+          <span class="w-6 h-0.5 bg-black"></span>
+          <span class="w-6 h-0.5 bg-black"></span>
+          <span class="w-6 h-0.5 bg-black"></span>
+        </button>
+      </nav>
+
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const menuToggle = document.getElementById("menu-toggle");
+          const closeMenu = document.getElementById("close-menu");
+          const menu = document.getElementById("mobile-menu");
+
+          // Åbner og lukker mobilmenu
+          menuToggle.addEventListener("click", function () {
+            menu.classList.remove("translate-x-full");
+          });
+
+          closeMenu.addEventListener("click", function () {
+            menu.classList.add("translate-x-full");
+          });
+
+          // Smooth scroll funktion
+          document.querySelectorAll(".scroll-link").forEach((link) => {
+            link.addEventListener("click", function (e) {
+              e.preventDefault();
+              const targetId = this.getAttribute("href").substring(1);
+              const targetElement = document.querySelector(
+                `#${targetId} .scroll-target`
+              );
+
+              if (targetElement) {
+                window.scrollTo({
+                  top: targetElement.offsetTop - 80, // Justerer så header ikke dækker
+                  behavior: "smooth",
+                });
+              }
+            });
+          });
+        });
+      </script>
+    </div>
+  </div>
+</header>
