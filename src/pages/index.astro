@@ -22,12 +22,13 @@ import sushi from "../assets/images/sushi.jpg";
 import fish from "../assets/images/fish.jpg";
 import Button from "../components/Button.astro";
 import Banner from "../components/Banner.astro";
+import ImageSlider from "../components/ImageSlider.astro";
 ---
 
 <MainLayout title="#SINGLEUSESUCKS">
   <!-- Hero section -->
   <section class="text-center py-8">
-    <h1 class="text-8xl font-bold text-blue-900">#SINGLEUSESUCKS</h1>
+    <h1 class="text-9xl font-bold text-blue-900">#SINGLEUSESUCKS</h1>
     <div class="flex justify-center gap-6 mt-6">
       <Image
         src={bottles}
@@ -51,40 +52,35 @@ import Banner from "../components/Banner.astro";
 
       <Image src={lady} alt="lady" class="w-1/3 max-w-xs object-cover" />
     </div>
+
     <!-- Sticky Button -->
     <div class="fixed bottom-15 left-1/2 transform -translate-x-1/2">
       <Button />
     </div>
   </section>
-  <!-- Diagram section -->
+
+  <!-- Inforgrafik section -->
   <section
-    class="grid grid-cols-1 md:grid-cols-2 gap-8 py-12 px-6 place-items-center"
+    class="grid grid-cols-1 md:grid-cols-2 items-center gap-20 py-16 px-4 max-w-6xl mx-auto"
   >
-    <Image
-      src={infografik}
-      alt="Infografik"
-      class="w-full md:w-1/2 max-w-lg object-cover"
-    />
-    <div class="w-full md:w-1/2 text-blue-900">
-      <h2 class="text-3xl font-bold">MERE PLASTIK END NOGENSINDE</h2>
-      <p class="mt-4 text-sm">
+    <Image src={infografik} alt="Infografik" class="w-full object-contain" />
+    <div class="text-blue-900 max-w-prose">
+      <h2 class="text-3xl md:text-4xl m-4">MERE PLASTIK END NOGENSINDE</h2>
+      <p class="text-m m-4">
         Hvert år ender ca. 11 millioner tons plastik i havet, hvilket truer
         klima, miljø og sundhed. Plastikproduktionen er steget fra 15 mio. ton
         årligt i 1950’erne til ca. 460 mio. ton i 2019, hvoraf halvdelen er
-        engangsprodukter.
-      </p>
-      <p class="mt-4 text-sm">
-        Den forventes at tredobles inden 2050 og blive den største drivkraft for
-        olieefterspørgslen ifølge IEA.
-      </p>
-      <p class="mt-4 text-sm">
-        Plastik øger CO2-udledningen, forurener naturen og skader dyrelivet. Det
-        nedbrydes til mikroplast, som spredes i vand og luft og optages i
-        fødekæden med uforudsigelige konsekvenser.
+        engangsprodukter. <br />
+        <br />Den forventes at tredobles inden 2050 og blive den største
+        drivkraft for olieefterspørgslen ifølge IEA. <br />
+        <br />Plastik øger CO2-udledningen, forurener naturen og skader
+        dyrelivet. Det nedbrydes til mikroplast, som spredes i vand og luft og
+        optages i fødekæden med uforudsigelige konsekvenser.
       </p>
     </div>
   </section>
-  <!-- Info bokser -->
+
+  <!-- Info bokse -->
 
   <section class="flex flex-col md:flex-row justify-center gap-6 py-12 px-6">
     <div class="border-3 border-[#2B4872] overflow-hidden max-w-xs">
@@ -134,41 +130,38 @@ import Banner from "../components/Banner.astro";
         <p>Tag muleposen med og sig nej tak til plastikposer</p>
       </div>
 
-      <img src={bottle} alt="Vandflaske" class="w-20 h-12 object-contain" />
+      <Image src={bottle} alt="bottle" class="w-1/3 max-w-xs object-cover" />
       <div class="staggeranimation">
         <h3 class="font-bold text-dark-blue">Din vandflaske</h3>
         <p>Brug drikkedunk og undgå købevandsflasker</p>
       </div>
 
-      <img src={milk} alt="Mælk" class="w-12 h-12 object-contain" />
+      <Image src={milk} alt="milk" class="w-1/3 max-w-xs object-cover" />
       <div class="staggeranimation">
         <h3 class="font-bold text-dark-blue">Din mælk</h3>
         <p>Køb mælk uden skruelåg</p>
       </div>
 
-      <img src={party} alt="Fest" class="w-12 h-12 object-contain" />
+      <Image src={party} alt="party" class="w-1/3 max-w-xs object-cover" />
       <div class="staggeranimation">
         <h3 class="font-bold text-dark-blue">Din fest</h3>
         <p>Drop engangsservice, balloner og sugerør</p>
       </div>
 
-      <img src={pants} alt="Tøjvask" class="w-12 h-12 object-contain" />
+      <Image src={pants} alt="pa" class="w-1/3 max-w-xs object-cover" />
       <div class="staggeranimation">
         <h3 class="font-bold text-dark-blue">Din tøjvask</h3>
         <p>Fyld vaskemaskinen, så du slider mindre på tøjet</p>
       </div>
 
-      <img
-        src={product}
-        alt="Plejeprodukter"
-        class="w-12 h-12 object-contain"
-      />
+      <Image src={product} alt="product" class="w-1/3 max-w-xs object-cover" />
+
       <div class="staggeranimation">
         <h3 class="font-bold text-dark-blue">Dine plejeprodukter</h3>
         <p>Køb i store beholdere frem for mange små</p>
       </div>
 
-      <img src={toilet} alt="Toilet" class="w-12 h-12 object-contain" />
+      <Image src={toilet} alt="toilet" class="w-1/3 max-w-xs object-cover" />
       <div class="staggeranimation">
         <h3 class="font-bold text-dark-blue">Dit toiletsøg</h3>
         <p>Kun tre ting i toilettet - tis, lort og papir</p>
@@ -178,7 +171,7 @@ import Banner from "../components/Banner.astro";
 
   <!-- Hvad gør de section -->
   <section class="mt-9 relative flex flex-col md:flex-row items-stretch">
-    <!-- Venstre side - Billede -->
+    <!-- Venstre side sticky Billede -->
     <div class="w-1/2 h-screen sticky top-0 border-r border-black">
       <img src={plastic1} alt="plastic" class="w-full h-full object-cover" />
     </div>
@@ -233,128 +226,105 @@ import Banner from "../components/Banner.astro";
       </ul>
     </div>
   </section>
-</MainLayout>
 
-<!-- Banner -->
+  <!-- Banner -->
 
-<section class="mt-9">
-  <Banner />
-</section>
+  <section class="mt-9">
+    <Banner />
+  </section>
 
-<!-- Giv et bidrag form Section -->
+  <!-- Giv et bidrag form Section -->
 
-<section
-  class="mt-9 max-w-lg mx-auto p-8 border-2 border-gray-400 rounded-lg bg-cream"
->
-  <h2 class="text-2xl font-semibold text-center text-dark-blue">
-    STØT MED ET BIDRAG
-  </h2>
-  <p class="text-center text-gray-600">- Vær med til at gøre en forskel</p>
+  <section
+    class="mt-9 max-w-lg mx-auto p-8 border-2 border-gray-400 rounded-lg bg-cream"
+  >
+    <h2 class="text-2xl font-semibold text-center text-dark-blue">
+      STØT MED ET BIDRAG
+    </h2>
+    <p class="text-center text-gray-600">- Vær med til at gøre en forskel</p>
 
-  <form class="mt-6 space-y-4">
-    <div class="flex flex-col">
-      <label class="font-semibold text-dark-blue" for="name"
-        >For- og efternavn</label
-      >
-      <div class="relative flex items-center">
-        <span class="absolute left-3 text-orange-500">👤</span>
-        <input
-          type="text"
-          id="name"
-          name="name"
-          placeholder="For- og efternavn"
-          class="w-full pl-10 p-2 border border-gray-300 rounded-md"
-        />
-      </div>
-    </div>
-
-    <div class="flex flex-col">
-      <label class="font-semibold text-dark-blue" for="email">Email</label>
-      <div class="relative flex items-center">
-        <span class="absolute left-3 text-orange-500">📧</span>
-        <input
-          type="email"
-          id="email"
-          name="email"
-          placeholder="Email"
-          class="w-full pl-10 p-2 border border-gray-300 rounded-md"
-        />
-
-        <div class="flex flex-col space-y-2">
-          <label class="flex items-center space-x-2">
-            <input
-              type="radio"
-              name="payment"
-              value="mobilepay"
-              class="accent-orange-500"
-            />
-            <span>MobilePay</span>
-          </label>
-
-          <label class="flex items-center space-x-2">
-            <input
-              type="radio"
-              name="payment"
-              value="card"
-              class="accent-orange-500"
-            />
-            <span>Kortbetaling</span>
-          </label>
-        </div>
-
-        <button
-          type="submit"
-          class="w-full bg-orange-500 text-white font-semibold py-3 rounded-md hover:bg-orange-600 transition"
+    <form class="mt-6 space-y-4">
+      <div class="flex flex-col">
+        <label class="font-semibold text-dark-blue" for="name"
+          >For- og efternavn</label
         >
-          BIDRAG
-        </button>
+        <div class="relative flex items-center">
+          <span class="absolute left-3 text-orange-500">👤</span>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="For- og efternavn"
+            class="w-full pl-10 p-2 border border-gray-300 rounded-md"
+          />
+        </div>
       </div>
+
+      <div class="flex flex-col">
+        <label class="font-semibold text-dark-blue" for="email">Email</label>
+        <div class="relative flex items-center">
+          <span class="absolute left-3 text-orange-500">📧</span>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Email"
+            class="w-full pl-10 p-2 border border-gray-300 rounded-md"
+          />
+
+          <div class="flex flex-col space-y-2">
+            <label class="flex items-center space-x-2">
+              <input
+                type="radio"
+                name="payment"
+                value="mobilepay"
+                class="accent-orange-500"
+              />
+              <span>MobilePay</span>
+            </label>
+
+            <label class="flex items-center space-x-2">
+              <input
+                type="radio"
+                name="payment"
+                value="card"
+                class="accent-orange-500"
+              />
+              <span>Kortbetaling</span>
+            </label>
+          </div>
+
+          <button
+            type="submit"
+            class="w-full bg-orange-500 text-white font-semibold py-3 rounded-md hover:bg-orange-600 transition"
+          >
+            BIDRAG
+          </button>
+        </div>
+      </div>
+    </form>
+  </section>
+
+  <!-- Merchandise Section -->
+  <section
+    class="relative w-full h-[400px] grid place-items-center bg-cover bg-center"
+    style={`background-image: url(${water})`}
+  >
+    <div class="text-center text-white">
+      <h1 class="text-3xl font-extrabold uppercase">
+        #SingleUseSucks Merchandise
+      </h1>
+      <p class="mt-2 text-lg">
+        - Vi donere 5% af omsætningen til havet.. året rundt!
+      </p>
+      <button
+        class="mt-4 bg-orange-500 text-white font-semibold py-2 px-6 rounded-md hover:bg-orange-600 transition"
+      >
+        Læs mere
+      </button>
     </div>
-  </form>
-</section>
-
-<!-- Merchandise Section -->
-<section
-  class="relative w-full h-[400px] grid place-items-center bg-cover bg-center"
-  style={`background-image: url(${water})`}
->
-  <div class="text-center text-white">
-    <h1 class="text-3xl font-extrabold uppercase">
-      #SingleUseSucks Merchandise
-    </h1>
-    <p class="mt-2 text-lg">
-      - Vi donere 5% af omsætningen til havet.. året rundt!
-    </p>
-    <button
-      class="mt-4 bg-orange-500 text-white font-semibold py-2 px-6 rounded-md hover:bg-orange-600 transition"
-    >
-      Læs mere
-    </button>
-  </div>
-</section>
-
-<section class="text-center py-8">
-  <h1 class="text-8xl font-bold text-blue-900">#SINGLEUSESUCKS</h1>
-</section>
-
-<script>
-  inView("#stagger", () => {
-    animate(
-      ".staggeranimation",
-      { opacity: [0, 1], y: [20, 0] }, // Lidt slide op
-      {
-        delay: stagger(0.3, { startDelay: 0.5 }),
-        duration: 0.5,
-        easing: "ease-out",
-      }
-    );
-  });
-
-  /* inView animation */
-  inView(".fotoinview", () => {
-    animate(".fotoinview", { x: [-2000, 0] }, { duration: 3 });
-  });
-</script>
+  </section>
+</MainLayout>
 
 <script>
   /* Import af Motion One bibliotek */
