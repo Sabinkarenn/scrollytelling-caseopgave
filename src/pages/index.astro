@@ -9,7 +9,6 @@ import skrald from "../assets/images/skrald.jpg";
 import skilpadde from "../assets/images/skilpadde.jpg";
 import plastic from "../assets/images/plastik3.jpg";
 import water from "../assets/images/water.jpg";
-import plastic1 from "../assets/images/plastic1.jpg";
 import bottle from "../assets/images/bottle.svg";
 import indkøb from "../assets/images/indkøb.svg";
 import milk from "../assets/images/milk.svg";
@@ -22,7 +21,14 @@ import sushi from "../assets/images/sushi.jpg";
 import fish from "../assets/images/fish.jpg";
 import Button from "../components/Button.astro";
 import Banner from "../components/Banner.astro";
-import ImageSlider from "../components/ImageSlider.astro";
+import some1 from "../assets/images/some1.jpg";
+import some2 from "../assets/images/some2.jpg";
+import some3 from "../assets/images/some3.png";
+import some4 from "../assets/images/some4.png";
+import some5 from "../assets/images/some5.png";
+import some6 from "../assets/images/some6.png";
+import instagram from "../assets/images/instagram.svg";
+import facebook from "../assets/images/facebook.svg";
 ---
 
 <MainLayout title="#SINGLEUSESUCKS">
@@ -54,7 +60,7 @@ import ImageSlider from "../components/ImageSlider.astro";
     </div>
 
     <!-- Sticky Button -->
-    <div class="fixed bottom-15 left-1/2 transform -translate-x-1/2">
+    <div class="fixed bottom-10 left-1/2 transform -translate-x-1/2 z-50">
       <Button />
     </div>
   </section>
@@ -82,27 +88,31 @@ import ImageSlider from "../components/ImageSlider.astro";
 
   <!-- Info bokse -->
 
-  <section class="flex flex-col md:flex-row justify-center gap-6 py-12 px-6">
-    <div class="border-3 border-[#2B4872] overflow-hidden max-w-xs">
-      <Image src={skrald} alt="Skrald" class="w-full object-cover" />
-      <p class="p-4 text-m text-[#2B4872]">
-        Plastik udleder store mængder CO2 gennem hele sin livscyklus og
-        forværrer klimaforandringerne.
-      </p>
-    </div>
-    <div class="border-3 border-[#2B4872] overflow-hidden max-w-xs">
-      <Image src={skilpadde} alt="Skilpadde" class="w-full object-cover" />
-      <p class="p-4 text-m text-[#2B4872]">
-        Millioner af tons plastik truer dyreliv, økosystemer og landbrug, hvor
-        det skaber mikroplast i jord og vand.
-      </p>
-    </div>
-    <div class="border-3 border-[#2B4872] overflow-hidden max-w-xs">
-      <Image src={plastic} alt="Plastic" class="w-full object-cover" />
-      <p class="p-4 text-m text-[#2B4872]">
-        Vi indtager mikroplast, som kan indeholde skadelige stoffer og øge
-        sundhedsrisici.
-      </p>
+  <section class="py-12 px-6">
+    <div class="grid grid-cols-1 md:grid-cols-3 justify-items-center">
+      <div class="infoboks border-3 border-[#2B4872] overflow-hidden max-w-xs">
+        <Image src={skrald} alt="Skrald" class="w-full object-cover" />
+        <p class="p-4 text-m text-[#2B4872]">
+          Plastik udleder store mængder CO2 gennem hele sin livscyklus og
+          forværrer klimaforandringerne.
+        </p>
+      </div>
+
+      <div class="infoboks border-3 border-[#2B4872] overflow-hidden max-w-xs">
+        <Image src={skilpadde} alt="Skilpadde" class="w-full object-cover" />
+        <p class="p-4 text-m text-[#2B4872]">
+          Millioner af tons plastik truer dyreliv, økosystemer og landbrug, hvor
+          det skaber mikroplast i jord og vand.
+        </p>
+      </div>
+
+      <div class="infoboks border-3 border-[#2B4872] overflow-hidden max-w-xs">
+        <Image src={plastic} alt="Plastic" class="w-full object-cover" />
+        <p class="p-4 text-m text-[#2B4872]">
+          Vi indtager mikroplast, som kan indeholde skadelige stoffer og øge
+          sundhedsrisici.
+        </p>
+      </div>
     </div>
   </section>
 
@@ -120,110 +130,125 @@ import ImageSlider from "../components/ImageSlider.astro";
     </h2>
     <p class="text-center text-2B4872 mb-6">- Vær med til at gøre en forskel</p>
 
-    <div
-      id="stagger"
-      class="grid grid-cols-[auto_1fr] gap-x-4 gap-y-6 items-center"
-    >
-      <Image src={indkøb} alt="indkøb" class="w-1/3 max-w-xs object-cover" />
-      <div class="staggeranimation">
-        <h3 class="font-bold text-dark-blue">Dit indkøb</h3>
-        <p>Tag muleposen med og sig nej tak til plastikposer</p>
-      </div>
+    <ul id="stagger" class="grid grid-cols-1 gap-y-6">
+      <li class="grid grid-cols-[auto_1fr] gap-x-4 items-start">
+        <Image src={indkøb} alt="indkøb" class="w-1/3 max-w-xs object-cover" />
+        <div class="staggeranimation">
+          <h3 class="font-bold text-dark-blue">Dit indkøb</h3>
+          <p>Tag muleposen med og sig nej tak til plastikposer</p>
+        </div>
+      </li>
 
-      <Image src={bottle} alt="bottle" class="w-1/3 max-w-xs object-cover" />
-      <div class="staggeranimation">
-        <h3 class="font-bold text-dark-blue">Din vandflaske</h3>
-        <p>Brug drikkedunk og undgå købevandsflasker</p>
-      </div>
+      <li class="grid grid-cols-[auto_1fr] gap-x-4 items-start">
+        <Image src={bottle} alt="bottle" class="w-1/3 max-w-xs object-cover" />
+        <div class="staggeranimation">
+          <h3 class="font-bold text-dark-blue">Din vandflaske</h3>
+          <p>Brug drikkedunk og undgå købevandsflasker</p>
+        </div>
+      </li>
 
-      <Image src={milk} alt="milk" class="w-1/3 max-w-xs object-cover" />
-      <div class="staggeranimation">
-        <h3 class="font-bold text-dark-blue">Din mælk</h3>
-        <p>Køb mælk uden skruelåg</p>
-      </div>
+      <li class="grid grid-cols-[auto_1fr] gap-x-4 items-start">
+        <Image src={milk} alt="milk" class="w-1/3 max-w-xs object-cover" />
+        <div class="staggeranimation">
+          <h3 class="font-bold text-dark-blue">Din mælk</h3>
+          <p>Køb mælk uden skruelåg</p>
+        </div>
+      </li>
 
-      <Image src={party} alt="party" class="w-1/3 max-w-xs object-cover" />
-      <div class="staggeranimation">
-        <h3 class="font-bold text-dark-blue">Din fest</h3>
-        <p>Drop engangsservice, balloner og sugerør</p>
-      </div>
+      <li class="grid grid-cols-[auto_1fr] gap-x-4 items-start">
+        <Image src={party} alt="party" class="w-1/3 max-w-xs object-cover" />
+        <div class="staggeranimation">
+          <h3 class="font-bold text-dark-blue">Din fest</h3>
+          <p>Drop engangsservice, balloner og sugerør</p>
+        </div>
+      </li>
 
-      <Image src={pants} alt="pa" class="w-1/3 max-w-xs object-cover" />
-      <div class="staggeranimation">
-        <h3 class="font-bold text-dark-blue">Din tøjvask</h3>
-        <p>Fyld vaskemaskinen, så du slider mindre på tøjet</p>
-      </div>
+      <li class="grid grid-cols-[auto_1fr] gap-x-4 items-start">
+        <Image src={pants} alt="pa" class="w-1/3 max-w-xs object-cover" />
+        <div class="staggeranimation">
+          <h3 class="font-bold text-dark-blue">Din tøjvask</h3>
+          <p>Fyld vaskemaskinen, så du slider mindre på tøjet</p>
+        </div>
+      </li>
 
-      <Image src={product} alt="product" class="w-1/3 max-w-xs object-cover" />
+      <li class="grid grid-cols-[auto_1fr] gap-x-4 items-start">
+        <Image
+          src={product}
+          alt="product"
+          class="w-1/3 max-w-xs object-cover"
+        />
+        <div class="staggeranimation">
+          <h3 class="font-bold text-dark-blue">Dine plejeprodukter</h3>
+          <p>Køb i store beholdere frem for mange små</p>
+        </div>
+      </li>
 
-      <div class="staggeranimation">
-        <h3 class="font-bold text-dark-blue">Dine plejeprodukter</h3>
-        <p>Køb i store beholdere frem for mange små</p>
-      </div>
-
-      <Image src={toilet} alt="toilet" class="w-1/3 max-w-xs object-cover" />
-      <div class="staggeranimation">
-        <h3 class="font-bold text-dark-blue">Dit toiletsøg</h3>
-        <p>Kun tre ting i toilettet - tis, lort og papir</p>
-      </div>
-    </div>
+      <li class="grid grid-cols-[auto_1fr] gap-x-4 items-start">
+        <Image src={toilet} alt="toilet" class="w-1/3 max-w-xs object-cover" />
+        <div class="staggeranimation">
+          <h3 class="font-bold text-dark-blue">Dit toiletsøg</h3>
+          <p>Kun tre ting i toilettet - tis, lort og papir</p>
+        </div>
+      </li>
+    </ul>
   </section>
 
-  <!-- Hvad gør de section -->
-  <section class="mt-9 relative flex flex-col md:flex-row items-stretch">
-    <!-- Venstre side sticky Billede -->
-    <div class="w-1/2 h-screen sticky top-0 border-r border-black">
-      <img src={plastic1} alt="plastic" class="w-full h-full object-cover" />
-    </div>
+  <!-- Hvad gør de section  -->
 
-    <div class="grid w-full md:w-1/2 p-6 gap-8">
-      <h2 class="text-2xl font-bold text-gray-900">
-        HVORDAN VI GØR EN FORSKEL
-      </h2>
+  <section
+    class="bg-teal-100 mt-8 h-screen w-full bg-cover bg-center"
+    style="background-image: url('/plastic1.jpg');"
+  >
+    <h3 class="text-xl font-semibold">Vores danske indsats</h3>
+    <p class="parallaxelement w-3/4 mx-auto p-10 bg-slate-50 text-xl">
+      Plastic Change engagerer borgere, virksomheder og politikere for at
+      reducere plastikforurening:
+    </p>
+  </section>
 
-      <div class="grid gap-6">
-        <!-- Vores danske indsats -->
-        <div class="bg-blue-900 text-white p-6 rounded-lg">
-          <h3 class="text-lg font-semibold">Vores danske indsats</h3>
-          <p class="mt-2 text-sm">
-            Plastic Change engagerer borgere, virksomheder og politikere for at
-            reducere plastikforurening:
-          </p>
-          <ul class="mt-2 text-sm space-y-2">
-            <li>
-              <strong>Borgere –</strong> Oplysning og kampagner inspirerer til bæredygtige
-              valg.
-            </li>
-            <li>
-              <strong>Virksomheder –</strong> Partnerskaber skaber innovative løsninger
-              og fremmer cirkulær økonomi.
-            </li>
-            <li>
-              <strong>Politik –</strong> Vi påvirker lovgivning gennem aktiv deltagelse
-              i den politiske debat.
-            </li>
-          </ul>
-        </div>
+  <section class="relative py-20 px-4">
+    <div class="max-w-2xl mx-auto grid gap-12">
+      <!-- Vores danske indsats -->
+      <div class="bg-blue-900 text-white p-6 sm:p-8 rounded-md">
+        <h3 class="text-xl font-semibold">Vores danske indsats</h3>
+        <p class="mt-2 text-sm">
+          Plastic Change engagerer borgere, virksomheder og politikere for at
+          reducere plastikforurening:
+        </p>
+        <ul class="mt-4 text-sm space-y-2 list-disc list-inside">
+          <li>
+            <strong>Borgere –</strong> Oplysning og kampagner inspirerer til bæredygtige
+            valg.
+          </li>
+          <li>
+            <strong>Virksomheder –</strong> Partnerskaber skaber innovative løsninger
+            og fremmer cirkulær økonomi.
+          </li>
+          <li>
+            <strong>Politik –</strong> Vi påvirker lovgivning gennem aktiv deltagelse
+            i den politiske debat. Læs mere her.
+          </li>
+        </ul>
       </div>
-    </div>
 
-    <!-- Vi påvirker global dagsorden -->
-    <div class="bg-white text-gray-900 p-6">
-      <h3 class="text-lg font-semibold">Vi påvirker global dagsorden</h3>
-      <ul class="mt-2 text-sm space-y-2">
-        <li>
-          <strong>EU –</strong> Vi samarbejder med EU for at styrke lovgivning om
-          plastikreduktion og genbrug.
-        </li>
-        <li>
-          <strong>Break Free From Plastic –</strong> Som styregruppemedlem samarbejder
-          vi med 3.000 miljøorganisationer om plastikforurening.
-        </li>
-        <li>
-          <strong>FN –</strong> Vi deltager i FN-forhandlinger for at sikre en global,
-          bindende aftale mod plastikforurening.
-        </li>
-      </ul>
+      <!-- Vi påvirker global dagsorden -->
+      <div class="bg-white text-blue-900 p-6 sm:p-8 rounded-md">
+        <h3 class="text-xl font-semibold">Vi påvirker global dagsorden</h3>
+        <ul class="mt-4 text-sm space-y-2 list-disc list-inside">
+          <li>
+            <strong>EU –</strong> Vi samarbejder med EU for at styrke lovgivning
+            om plastikreduktion og genbrug.
+          </li>
+          <li>
+            <strong>Break Free From Plastic –</strong> Som styregruppemedlem samarbejder
+            vi med 3.000 miljøorganisationer om plastikforurening.
+          </li>
+          <li>
+            <strong>FN –</strong> Vi deltager i FN-forhandlinger for at sikre en
+            global, bindende aftale mod plastikforurening.
+          </li>
+        </ul>
+      </div>
     </div>
   </section>
 
@@ -236,7 +261,7 @@ import ImageSlider from "../components/ImageSlider.astro";
   <!-- Giv et bidrag form Section -->
 
   <section
-    class="mt-9 max-w-lg mx-auto p-8 border-2 border-gray-400 rounded-lg bg-cream"
+    class="bidrag mt-9 max-w-lg mx-auto p-8 border-2 border-gray-400 rounded-lg bg-cream"
   >
     <h2 class="text-2xl font-semibold text-center text-dark-blue">
       STØT MED ET BIDRAG
@@ -324,9 +349,115 @@ import ImageSlider from "../components/ImageSlider.astro";
       </button>
     </div>
   </section>
+
+  <section class="py-12 text-center">
+    <h2 class="text-2xl md:text-3xl font-semibold text-[#1b2559] mb-8">
+      FØLG OS PÅ SOCIALE MEDIER
+    </h2>
+    <div
+      class="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-4xl mx-auto px-4 mb-6"
+    >
+      <a
+        href="https://www.instagram.com/plasticchange/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img
+          src={some1.src}
+          alt="SoMe 1"
+          class="w-full h-auto object-cover transition-transform duration-300 ease-out hover:scale-105"
+        />
+      </a>
+      <a
+        href="https://www.instagram.com/plasticchange/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img
+          src={some2.src}
+          alt="SoMe 2"
+          class="w-full h-auto object-cover transition-transform duration-300 ease-out hover:scale-105"
+        />
+      </a>
+      <a
+        href="https://www.instagram.com/plasticchange/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img
+          src={some3.src}
+          alt="SoMe 3"
+          class="w-full h-auto object-cover transition-transform duration-300 ease-out hover:scale-105"
+        />
+      </a>
+      <a
+        href="https://www.instagram.com/plasticchange/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img
+          src={some4.src}
+          alt="SoMe 4"
+          class="w-full h-auto object-cover transition-transform duration-300 ease-out hover:scale-105"
+        />
+      </a>
+      <a
+        href="https://www.instagram.com/plasticchange/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img
+          src={some5.src}
+          alt="SoMe 5"
+          class="w-full h-auto object-cover transition-transform duration-300 ease-out hover:scale-105"
+        />
+      </a>
+      <a
+        href="https://www.instagram.com/plasticchange/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img
+          src={some6.src}
+          alt="SoMe 6"
+          class="w-full h-auto object-cover transition-transform duration-300 ease-out hover:scale-105"
+        />
+      </a>
+    </div>
+
+    <!-- SoMe ikoner som grid -->
+    <div class="grid grid-cols-2 gap-4 justify-center w-fit mx-auto">
+      <img src={instagram.src} alt="Instagram" class="w-6 h-6" />
+      <img src={facebook.src} alt="Facebook" class="w-6 h-6" />
+    </div>
+  </section>
 </MainLayout>
 
 <script>
   /* Import af Motion One bibliotek */
   import { animate, stagger, inView, scroll } from "motion";
+
+  /* inView animation */
+  inView(".bidrag", () => {
+    animate(".bidrag", { x: [-2000, 0] }, { duration: 3 });
+  });
+
+  /* Stagger animation */
+  inView("#stagger", () => {
+    animate(
+      "#stagger li",
+      { opacity: [0, 1], transform: ["translateY(50px)", "translateY(0px)"] },
+      {
+        delay: stagger(0.3, { start: 0.5 }), // fx 0.5s start delay og 0.3s mellemrum
+        duration: 0.6,
+        easing: "ease-out",
+        fill: "forwards",
+      }
+    );
+  });
+
+  /* Parallax med tekstboks */
+  scroll(animate(".parallaxelement", { y: [50, 500] }), {
+    target: document.querySelector(".parallaxelement"),
+  });
 </script>

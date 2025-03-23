@@ -4,9 +4,7 @@ import Link from "../components/Link.astro";
 import { useState } from "react";
 ---
 
-<header
-  class="bg-cream border-b border-blue-900 py-5 px-6 lg:px-0 relative z-20"
->
+<header class="border-b-3 border-[#2B4872] py-5 px-6 lg:px-0 relative z-20">
   <div class="container mx-auto flex justify-between items-center relative">
     <!-- Logo -->
     <div></div>
@@ -14,12 +12,13 @@ import { useState } from "react";
     <!-- Navigation -->
     <div class="container mx-auto flex justify-between items-center relative">
       <nav
-        class="flex flex-1 justify-end items-center space-x-6 font-medium text-blue-900"
+        class="flex flex-1 justify-end items-center space-x-6 font-medium text-[#2B4872]"
       >
         <a href="#vaer-med" class="scroll-link">Vær med</a>
         <a href="#shop" class="scroll-link">Shop</a>
         <a href="#om-os" class="scroll-link">Om os</a>
         <Button />
+
         <!-- Burger menu til mobil -->
         <button id="menu-toggle" class="lg:hidden flex flex-col space-y-1">
           <span class="w-6 h-0.5 bg-black"></span>
