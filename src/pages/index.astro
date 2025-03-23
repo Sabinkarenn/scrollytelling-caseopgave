@@ -29,421 +29,457 @@ import some5 from "../assets/images/some5.png";
 import some6 from "../assets/images/some6.png";
 import instagram from "../assets/images/instagram.svg";
 import facebook from "../assets/images/facebook.svg";
+
+const group1 = [bottles.src, world.src, sea.src];
+const group2 = [fish.src, sushi.src, lady.src];
 ---
 
 <MainLayout title="#SINGLEUSESUCKS">
   <!-- Hero section -->
   <section class="text-center py-8">
-    <h1 class="text-9xl font-bold text-[#2B4872]">#SINGLEUSESUCKS</h1>
+    <h1 class="text-8xl font-bold text-[#2B4872]">#SINGLEUSESUCKS</h1>
 
     <!-- Slider container -->
     <div
       id="slider"
-      class="grid grid-cols-3 gap-4 mt-6 transition-opacity duration-300 opacity-100"
+      class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 mt-6 justify-center transition-opacity duration-300 opacity-100"
     >
-      <Image src={bottles} alt="Plastic bottles" class="object-cover w-full" />
+      <Image
+        src={bottles}
+        alt="Plastic bottles"
+        class="w-full max-w-[280px] object-cover mx-auto"
+      />
       <Image
         src={world}
         alt="Earth in plastic bag"
-        class="object-cover w-full"
+        class="w-full max-w-[280px] object-cover mx-auto"
       />
-      <Image src={sea} alt="Polluted water" class="object-cover w-full" />
-    </div>
-  </section>
-
-  <!-- Sticky Button -->
-  <div class="fixed bottom-10 left-1/2 transform -translate-x-1/2 z-50">
-    <Button />
-  </div>
-</MainLayout>
-
-<!-- Inforgrafik section -->
-<section
-  class="grid grid-cols-1 md:grid-cols-2 items-center gap-20 py-16 px-4 max-w-6xl mx-auto"
->
-  <Image src={infografik} alt="Infografik" class="w-full object-contain" />
-  <div class="text-blue-900 max-w-prose">
-    <h2 class="text-3xl md:text-4xl m-4">MERE PLASTIK END NOGENSINDE</h2>
-    <p class="text-m m-4">
-      Hvert år ender ca. 11 millioner tons plastik i havet, hvilket truer klima,
-      miljø og sundhed. Plastikproduktionen er steget fra 15 mio. ton årligt i
-      1950’erne til ca. 460 mio. ton i 2019, hvoraf halvdelen er
-      engangsprodukter. <br />
-      <br />Den forventes at tredobles inden 2050 og blive den største drivkraft
-      for olieefterspørgslen ifølge IEA. <br />
-      <br />Plastik øger CO2-udledningen, forurener naturen og skader dyrelivet.
-      Det nedbrydes til mikroplast, som spredes i vand og luft og optages i
-      fødekæden med uforudsigelige konsekvenser.
-    </p>
-  </div>
-</section>
-
-<!-- Info bokse -->
-
-<section class="py-12 px-6">
-  <div class="grid grid-cols-1 md:grid-cols-3 justify-items-center">
-    <div class="infoboks border-3 border-[#2B4872] overflow-hidden max-w-xs">
-      <Image src={skrald} alt="Skrald" class="w-full object-cover" />
-      <p class="p-4 text-m text-[#2B4872]">
-        Plastik udleder store mængder CO2 gennem hele sin livscyklus og
-        forværrer klimaforandringerne.
-      </p>
+      <Image
+        src={sea}
+        alt="Polluted water"
+        class="w-full max-w-[280px] object-cover mx-auto"
+      />
     </div>
 
-    <div class="infoboks border-3 border-[#2B4872] overflow-hidden max-w-xs">
-      <Image src={skilpadde} alt="Skilpadde" class="w-full object-cover" />
-      <p class="p-4 text-m text-[#2B4872]">
-        Millioner af tons plastik truer dyreliv, økosystemer og landbrug, hvor
-        det skaber mikroplast i jord og vand.
-      </p>
+    <!-- Sticky Button -->
+    <div class="fixed bottom-10 left-1/2 transform -translate-x-1/2 z-50">
+      <Button />
     </div>
 
-    <div class="infoboks border-3 border-[#2B4872] overflow-hidden max-w-xs">
-      <Image src={plastic} alt="Plastic" class="w-full object-cover" />
-      <p class="p-4 text-m text-[#2B4872]">
-        Vi indtager mikroplast, som kan indeholde skadelige stoffer og øge
-        sundhedsrisici.
-      </p>
-    </div>
-  </div>
-</section>
-
-<!-- Banner -->
-
-<section>
-  <Banner />
-</section>
-
-<!-- 7 gode råd section -->
-
-<section class="mt-9 max-w-2xl mx-auto p-6 border-3 border-[#2B4872]">
-  <h2 class="text-2xl font-semibold text-center text-2B4872">
-    7 GODE RÅD MOD PLASTIKSPILD
-  </h2>
-  <p class="text-center text-2B4872 mb-6">- Vær med til at gøre en forskel</p>
-
-  <ul id="stagger" class="grid grid-cols-1 gap-y-6">
-    <li class="grid grid-cols-[auto_1fr] gap-x-4 items-start">
-      <Image src={indkøb} alt="indkøb" class="w-1/3 max-w-xs object-cover" />
-      <div class="staggeranimation">
-        <h3 class="font-bold text-dark-blue">Dit indkøb</h3>
-        <p>Tag muleposen med og sig nej tak til plastikposer</p>
-      </div>
-    </li>
-
-    <li class="grid grid-cols-[auto_1fr] gap-x-4 items-start">
-      <Image src={bottle} alt="bottle" class="w-1/3 max-w-xs object-cover" />
-      <div class="staggeranimation">
-        <h3 class="font-bold text-dark-blue">Din vandflaske</h3>
-        <p>Brug drikkedunk og undgå købevandsflasker</p>
-      </div>
-    </li>
-
-    <li class="grid grid-cols-[auto_1fr] gap-x-4 items-start">
-      <Image src={milk} alt="milk" class="w-1/3 max-w-xs object-cover" />
-      <div class="staggeranimation">
-        <h3 class="font-bold text-dark-blue">Din mælk</h3>
-        <p>Køb mælk uden skruelåg</p>
-      </div>
-    </li>
-
-    <li class="grid grid-cols-[auto_1fr] gap-x-4 items-start">
-      <Image src={party} alt="party" class="w-1/3 max-w-xs object-cover" />
-      <div class="staggeranimation">
-        <h3 class="font-bold text-dark-blue">Din fest</h3>
-        <p>Drop engangsservice, balloner og sugerør</p>
-      </div>
-    </li>
-
-    <li class="grid grid-cols-[auto_1fr] gap-x-4 items-start">
-      <Image src={pants} alt="pa" class="w-1/3 max-w-xs object-cover" />
-      <div class="staggeranimation">
-        <h3 class="font-bold text-dark-blue">Din tøjvask</h3>
-        <p>Fyld vaskemaskinen, så du slider mindre på tøjet</p>
-      </div>
-    </li>
-
-    <li class="grid grid-cols-[auto_1fr] gap-x-4 items-start">
-      <Image src={product} alt="product" class="w-1/3 max-w-xs object-cover" />
-      <div class="staggeranimation">
-        <h3 class="font-bold text-dark-blue">Dine plejeprodukter</h3>
-        <p>Køb i store beholdere frem for mange små</p>
-      </div>
-    </li>
-
-    <li class="grid grid-cols-[auto_1fr] gap-x-4 items-start">
-      <Image src={toilet} alt="toilet" class="w-1/3 max-w-xs object-cover" />
-      <div class="staggeranimation">
-        <h3 class="font-bold text-dark-blue">Dit toiletsøg</h3>
-        <p>Kun tre ting i toilettet - tis, lort og papir</p>
-      </div>
-    </li>
-  </ul>
-</section>
-
-<!-- Hvad gør de section  -->
-
-<article>
-  <!-- containeren -->
-  <div
-    class="sticky top-0 left-0 right-0 bottom-0 h-screen w-full bg-cover bg-center"
-    style="background-image: url('/plastic1.jpg')"
-  >
-  </div><!-- sticky elementet -->
-  <div class="relative flex justify-end">
-    <!-- relative elementet -->
-    <div class="flex flex-col w-full md:w-1/2 h-full justify-center gap-4 p-4">
-      <div class="bg-blue-900 text-white p-6 sm:p-8 rounded-md">
-        <h3 class="text-xl font-semibold">Vores danske indsats</h3>
-        <p class="mt-2 text-sm">
-          Plastic Change engagerer borgere, virksomheder og politikere for at
-          reducere plastikforurening:
+    <!-- Inforgrafik section -->
+    <section
+      class="grid grid-cols-1 md:grid-cols-2 gap-20 py-16 px-4 max-w-6xl mx-auto"
+    >
+      <Image src={infografik} alt="Infografik" class="w-full object-contain" />
+      <div class="text-[#2B4872] max-w-prose">
+        <h2 class="text-3xl md:text-4xl m-4">MERE PLASTIK END NOGENSINDE</h2>
+        <p class="text-m m-4">
+          Hvert år ender ca. 11 millioner tons plastik i havet, hvilket truer
+          klima, miljø og sundhed. Plastikproduktionen er steget fra 15 mio. ton
+          årligt i 1950’erne til ca. 460 mio. ton i 2019, hvoraf halvdelen er
+          engangsprodukter. <br />
+          <br />Den forventes at tredobles inden 2050 og blive den største
+          drivkraft for olieefterspørgslen ifølge IEA. <br />
+          <br />Plastik øger CO2-udledningen, forurener naturen og skader
+          dyrelivet. Det nedbrydes til mikroplast, som spredes i vand og luft og
+          optages i fødekæden med uforudsigelige konsekvenser.
         </p>
-        <ul class="mt-4 text-sm space-y-2 list-disc list-inside">
-          <li>
-            <strong>Borgere –</strong> Oplysning og kampagner inspirerer til bæredygtige
-            valg.
-          </li>
-          <li>
-            <strong>Virksomheder –</strong> Partnerskaber skaber innovative løsninger
-            og fremmer cirkulær økonomi.
-          </li>
-          <li>
-            <strong>Politik –</strong> Vi påvirker lovgivning gennem aktiv deltagelse
-            i den politiske debat. Læs mere her.
-          </li>
-        </ul>
       </div>
-      <div class="bg-white text-blue-900 p-6 sm:p-8 rounded-md">
-        <h3 class="text-xl font-semibold">Vi påvirker global dagsorden</h3>
-        <ul class="mt-4 text-sm space-y-2 list-disc list-inside">
-          <li>
-            <strong>EU –</strong> Vi samarbejder med EU for at styrke lovgivning
-            om plastikreduktion og genbrug.
-          </li>
-          <li>
-            <strong>Break Free From Plastic –</strong> Som styregruppemedlem samarbejder
-            vi med 3.000 miljøorganisationer om plastikforurening.
-          </li>
-          <li>
-            <strong>FN –</strong> Vi deltager i FN-forhandlinger for at sikre en
-            global, bindende aftale mod plastikforurening.
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</article>
-<div class="h-[100vh]"></div><!-- afstandsstykket -->
+    </section>
 
-<!-- Banner -->
+    <!-- Info bokse -->
 
-<section class="mt-9">
-  <Banner />
-</section>
-
-<!-- Giv et bidrag form Section -->
-
-<section
-  class="bidrag mt-9 max-w-lg mx-auto p-8 border-2 border-gray-400 rounded-lg bg-cream"
->
-  <h2 class="text-2xl font-semibold text-center text-dark-blue">
-    STØT MED ET BIDRAG
-  </h2>
-  <p class="text-center text-gray-600">- Vær med til at gøre en forskel</p>
-
-  <form class="mt-6 space-y-4">
-    <div class="flex flex-col">
-      <label class="font-semibold text-dark-blue" for="name"
-        >For- og efternavn</label
-      >
-      <div class="relative flex items-center">
-        <span class="absolute left-3 text-orange-500">👤</span>
-        <input
-          type="text"
-          id="name"
-          name="name"
-          placeholder="For- og efternavn"
-          class="w-full pl-10 p-2 border border-gray-300 rounded-md"
-        />
-      </div>
-    </div>
-
-    <div class="flex flex-col">
-      <label class="font-semibold text-dark-blue" for="email">Email</label>
-      <div class="relative flex items-center">
-        <span class="absolute left-3 text-orange-500">📧</span>
-        <input
-          type="email"
-          id="email"
-          name="email"
-          placeholder="Email"
-          class="w-full pl-10 p-2 border border-gray-300 rounded-md"
-        />
-
-        <div class="flex flex-col space-y-2">
-          <label class="flex items-center space-x-2">
-            <input
-              type="radio"
-              name="payment"
-              value="mobilepay"
-              class="accent-orange-500"
-            />
-            <span>MobilePay</span>
-          </label>
-
-          <label class="flex items-center space-x-2">
-            <input
-              type="radio"
-              name="payment"
-              value="card"
-              class="accent-orange-500"
-            />
-            <span>Kortbetaling</span>
-          </label>
+    <section class="py-12 px-6">
+      <div class="grid grid-cols-1 md:grid-cols-3 justify-items-center">
+        <div
+          class="infoboks border-3 border-[#2B4872] overflow-hidden max-w-xs"
+        >
+          <Image src={skrald} alt="Skrald" class="w-full object-cover" />
+          <p class="p-4 text-m text-[#2B4872]">
+            Plastik udleder store mængder CO2 gennem hele sin livscyklus og
+            forværrer klimaforandringerne.
+          </p>
         </div>
 
-        <button
-          type="submit"
-          class="w-full bg-orange-500 text-white font-semibold py-3 rounded-md hover:bg-orange-600 transition"
+        <div
+          class="infoboks border-3 border-[#2B4872] overflow-hidden max-w-xs"
         >
-          BIDRAG
+          <Image src={skilpadde} alt="Skilpadde" class="w-full object-cover" />
+          <p class="p-4 text-m text-[#2B4872]">
+            Millioner af tons plastik truer dyreliv, økosystemer og landbrug,
+            hvor det skaber mikroplast i jord og vand.
+          </p>
+        </div>
+
+        <div
+          class="infoboks border-3 border-[#2B4872] overflow-hidden max-w-xs"
+        >
+          <Image src={plastic} alt="Plastic" class="w-full object-cover" />
+          <p class="p-4 text-m text-[#2B4872]">
+            Vi indtager mikroplast, som kan indeholde skadelige stoffer og øge
+            sundhedsrisici.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Banner -->
+
+    <section>
+      <Banner />
+    </section>
+
+    <!-- 7 gode råd section -->
+
+    <section class="mt-9 max-w-2xl mx-auto p-6 border-3 border-[#2B4872]">
+      <h2 class="text-2xl font-semibold text-center text-2B4872">
+        7 GODE RÅD MOD PLASTIKSPILD
+      </h2>
+      <p class="text-center text-2B4872 mb-6">
+        - Vær med til at gøre en forskel
+      </p>
+
+      <ul id="stagger" class="grid grid-cols-1 gap-y-6">
+        <li class="grid grid-cols-[auto_1fr] gap-x-4 items-start">
+          <Image
+            src={indkøb}
+            alt="indkøb"
+            class="w-1/3 max-w-xs object-cover"
+          />
+          <div class="staggeranimation">
+            <h3 class="font-bold text-dark-blue">Dit indkøb</h3>
+            <p>Tag muleposen med og sig nej tak til plastikposer</p>
+          </div>
+        </li>
+
+        <li class="grid grid-cols-[auto_1fr] gap-x-4 items-start">
+          <Image
+            src={bottle}
+            alt="bottle"
+            class="w-1/3 max-w-xs object-cover"
+          />
+          <div class="staggeranimation">
+            <h3 class="font-bold text-dark-blue">Din vandflaske</h3>
+            <p>Brug drikkedunk og undgå købevandsflasker</p>
+          </div>
+        </li>
+
+        <li class="grid grid-cols-[auto_1fr] gap-x-4 items-start">
+          <Image src={milk} alt="milk" class="w-1/3 max-w-xs object-cover" />
+          <div class="staggeranimation">
+            <h3 class="font-bold text-dark-blue">Din mælk</h3>
+            <p>Køb mælk uden skruelåg</p>
+          </div>
+        </li>
+
+        <li class="grid grid-cols-[auto_1fr] gap-x-4 items-start">
+          <Image src={party} alt="party" class="w-1/3 max-w-xs object-cover" />
+          <div class="staggeranimation">
+            <h3 class="font-bold text-dark-blue">Din fest</h3>
+            <p>Drop engangsservice, balloner og sugerør</p>
+          </div>
+        </li>
+
+        <li class="grid grid-cols-[auto_1fr] gap-x-4 items-start">
+          <Image src={pants} alt="pa" class="w-1/3 max-w-xs object-cover" />
+          <div class="staggeranimation">
+            <h3 class="font-bold text-dark-blue">Din tøjvask</h3>
+            <p>Fyld vaskemaskinen, så du slider mindre på tøjet</p>
+          </div>
+        </li>
+
+        <li class="grid grid-cols-[auto_1fr] gap-x-4 items-start">
+          <Image
+            src={product}
+            alt="product"
+            class="w-1/3 max-w-xs object-cover"
+          />
+          <div class="staggeranimation">
+            <h3 class="font-bold text-dark-blue">Dine plejeprodukter</h3>
+            <p>Køb i store beholdere frem for mange små</p>
+          </div>
+        </li>
+
+        <li class="grid grid-cols-[auto_1fr] gap-x-4 items-start">
+          <Image
+            src={toilet}
+            alt="toilet"
+            class="w-1/3 max-w-xs object-cover"
+          />
+          <div class="staggeranimation">
+            <h3 class="font-bold text-dark-blue">Dit toiletsøg</h3>
+            <p>Kun tre ting i toilettet - tis, lort og papir</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Hvad gør de section  -->
+
+    <article>
+      <!-- containeren -->
+      <div
+        class="sticky top-0 left-0 right-0 bottom-0 h-screen w-full bg-cover bg-center"
+        style="background-image: url('/plastic1.jpg')"
+      >
+      </div><!-- sticky elementet -->
+      <div class="relative flex justify-end">
+        <!-- relative elementet -->
+        <div
+          class="flex flex-col w-full md:w-1/2 h-full justify-center gap-4 p-4"
+        >
+          <div class="bg-blue-900 text-white p-6 sm:p-8 rounded-md">
+            <h3 class="text-xl font-semibold">Vores danske indsats</h3>
+            <p class="mt-2 text-sm">
+              Plastic Change engagerer borgere, virksomheder og politikere for
+              at reducere plastikforurening:
+            </p>
+            <ul class="mt-4 text-sm space-y-2 list-disc list-inside">
+              <li>
+                <strong>Borgere –</strong> Oplysning og kampagner inspirerer til
+                bæredygtige valg.
+              </li>
+              <li>
+                <strong>Virksomheder –</strong> Partnerskaber skaber innovative løsninger
+                og fremmer cirkulær økonomi.
+              </li>
+              <li>
+                <strong>Politik –</strong> Vi påvirker lovgivning gennem aktiv deltagelse
+                i den politiske debat. Læs mere her.
+              </li>
+            </ul>
+          </div>
+          <div class="bg-white text-blue-900 p-6 sm:p-8 rounded-md">
+            <h3 class="text-xl font-semibold">Vi påvirker global dagsorden</h3>
+            <ul class="mt-4 text-sm space-y-2 list-disc list-inside">
+              <li>
+                <strong>EU –</strong> Vi samarbejder med EU for at styrke lovgivning
+                om plastikreduktion og genbrug.
+              </li>
+              <li>
+                <strong>Break Free From Plastic –</strong> Som styregruppemedlem
+                samarbejder vi med 3.000 miljøorganisationer om plastikforurening.
+              </li>
+              <li>
+                <strong>FN –</strong> Vi deltager i FN-forhandlinger for at sikre
+                en global, bindende aftale mod plastikforurening.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </article>
+    <div class="h-[100vh]"></div><!-- afstandsstykket -->
+
+    <!-- Banner -->
+
+    <section class="mt-9">
+      <Banner />
+    </section>
+
+    <!-- Giv et bidrag form Section -->
+
+    <section
+      class="bidrag mt-9 max-w-lg mx-auto p-8 border-2 border-gray-400 rounded-lg bg-cream"
+    >
+      <h2 class="text-2xl font-semibold text-center text-dark-blue">
+        STØT MED ET BIDRAG
+      </h2>
+      <p class="text-center text-gray-600">- Vær med til at gøre en forskel</p>
+
+      <form class="mt-6 space-y-4">
+        <div class="flex flex-col">
+          <label class="font-semibold text-dark-blue" for="name"
+            >For- og efternavn</label
+          >
+          <div class="relative flex items-center">
+            <span class="absolute left-3 text-orange-500">👤</span>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="For- og efternavn"
+              class="w-full pl-10 p-2 border border-gray-300 rounded-md"
+            />
+          </div>
+        </div>
+
+        <div class="flex flex-col">
+          <label class="font-semibold text-dark-blue" for="email">Email</label>
+          <div class="relative flex items-center">
+            <span class="absolute left-3 text-orange-500">📧</span>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Email"
+              class="w-full pl-10 p-2 border border-gray-300 rounded-md"
+            />
+
+            <div class="flex flex-col space-y-2">
+              <label class="flex items-center space-x-2">
+                <input
+                  type="radio"
+                  name="payment"
+                  value="mobilepay"
+                  class="accent-orange-500"
+                />
+                <span>MobilePay</span>
+              </label>
+
+              <label class="flex items-center space-x-2">
+                <input
+                  type="radio"
+                  name="payment"
+                  value="card"
+                  class="accent-orange-500"
+                />
+                <span>Kortbetaling</span>
+              </label>
+            </div>
+
+            <button
+              type="submit"
+              class="w-full bg-orange-500 text-white font-semibold py-3 rounded-md hover:bg-orange-600 transition"
+            >
+              BIDRAG
+            </button>
+          </div>
+        </div>
+      </form>
+    </section>
+
+    <section
+      class="relative w-full h-[400px] grid place-items-center bg-cover bg-center"
+      style={`background-image: url(${water.src})`}
+    >
+      <div class="text-center text-white">
+        <h1 class="text-3xl font-extrabold uppercase">
+          #SingleUseSucks Merchandise
+        </h1>
+        <p class="mt-2 text-lg">
+          - Vi donerer 5% af omsætningen til havet... året rundt!
+        </p>
+        <button
+          class="mt-4 bg-orange-500 text-white font-semibold py-2 px-6 rounded-md hover:bg-orange-600 transition"
+        >
+          Læs mere
         </button>
       </div>
-    </div>
-  </form>
-</section>
+    </section>
 
-<!-- Merchandise Section -->
-<section
-  class="relative w-full h-[400px] grid place-items-center bg-cover bg-center"
-  style={`background-image: url(${water})`}
->
-  <div class="text-center text-white">
-    <h1 class="text-3xl font-extrabold uppercase">
-      #SingleUseSucks Merchandise
-    </h1>
-    <p class="mt-2 text-lg">
-      - Vi donere 5% af omsætningen til havet.. året rundt!
-    </p>
-    <button
-      class="mt-4 bg-orange-500 text-white font-semibold py-2 px-6 rounded-md hover:bg-orange-600 transition"
-    >
-      Læs mere
-    </button>
-  </div>
-</section>
+    <section class="py-12 text-center">
+      <h2 class="text-2xl md:text-3xl font-semibold text-[#1b2559] mb-8">
+        FØLG OS PÅ SOCIALE MEDIER
+      </h2>
+      <div
+        class="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-4xl mx-auto px-4 mb-6"
+      >
+        <a
+          href="https://www.instagram.com/plasticchange/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src={some1.src}
+            alt="SoMe 1"
+            class="w-full h-auto object-cover transition-transform duration-300 ease-out hover:scale-105"
+          />
+        </a>
+        <a
+          href="https://www.instagram.com/plasticchange/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src={some2.src}
+            alt="SoMe 2"
+            class="w-full h-auto object-cover transition-transform duration-300 ease-out hover:scale-105"
+          />
+        </a>
+        <a
+          href="https://www.instagram.com/plasticchange/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src={some3.src}
+            alt="SoMe 3"
+            class="w-full h-auto object-cover transition-transform duration-300 ease-out hover:scale-105"
+          />
+        </a>
+        <a
+          href="https://www.instagram.com/plasticchange/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src={some4.src}
+            alt="SoMe 4"
+            class="w-full h-auto object-cover transition-transform duration-300 ease-out hover:scale-105"
+          />
+        </a>
+        <a
+          href="https://www.instagram.com/plasticchange/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src={some5.src}
+            alt="SoMe 5"
+            class="w-full h-auto object-cover transition-transform duration-300 ease-out hover:scale-105"
+          />
+        </a>
+        <a
+          href="https://www.instagram.com/plasticchange/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src={some6.src}
+            alt="SoMe 6"
+            class="w-full h-auto object-cover transition-transform duration-300 ease-out hover:scale-105"
+          />
+        </a>
+      </div>
 
-<section class="py-12 text-center">
-  <h2 class="text-2xl md:text-3xl font-semibold text-[#1b2559] mb-8">
-    FØLG OS PÅ SOCIALE MEDIER
-  </h2>
-  <div
-    class="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-4xl mx-auto px-4 mb-6"
-  >
-    <a
-      href="https://www.instagram.com/plasticchange/"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      <img
-        src={some1.src}
-        alt="SoMe 1"
-        class="w-full h-auto object-cover transition-transform duration-300 ease-out hover:scale-105"
-      />
-    </a>
-    <a
-      href="https://www.instagram.com/plasticchange/"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      <img
-        src={some2.src}
-        alt="SoMe 2"
-        class="w-full h-auto object-cover transition-transform duration-300 ease-out hover:scale-105"
-      />
-    </a>
-    <a
-      href="https://www.instagram.com/plasticchange/"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      <img
-        src={some3.src}
-        alt="SoMe 3"
-        class="w-full h-auto object-cover transition-transform duration-300 ease-out hover:scale-105"
-      />
-    </a>
-    <a
-      href="https://www.instagram.com/plasticchange/"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      <img
-        src={some4.src}
-        alt="SoMe 4"
-        class="w-full h-auto object-cover transition-transform duration-300 ease-out hover:scale-105"
-      />
-    </a>
-    <a
-      href="https://www.instagram.com/plasticchange/"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      <img
-        src={some5.src}
-        alt="SoMe 5"
-        class="w-full h-auto object-cover transition-transform duration-300 ease-out hover:scale-105"
-      />
-    </a>
-    <a
-      href="https://www.instagram.com/plasticchange/"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      <img
-        src={some6.src}
-        alt="SoMe 6"
-        class="w-full h-auto object-cover transition-transform duration-300 ease-out hover:scale-105"
-      />
-    </a>
-  </div>
+      <!-- SoMe ikoner  -->
+      <div class="grid grid-cols-2 gap-4 justify-center w-fit mx-auto">
+        <img src={instagram.src} alt="Instagram" class="w-7 h-7" />
+        <img src={facebook.src} alt="Facebook" class="w-6 h-6" />
+      </div>
+    </section>
+  </section>
 
-  <!-- SoMe ikoner som grid -->
-  <div class="grid grid-cols-2 gap-4 justify-center w-fit mx-auto">
-    <img src={instagram.src} alt="Instagram" class="w-6 h-6" />
-    <img src={facebook.src} alt="Facebook" class="w-6 h-6" />
-  </div>
-</section>
+  <script>
+    /* Import af Motion One bibliotek */
+    import { animate, stagger, inView, scroll } from "motion";
 
-<script>
-  /* Import af Motion One bibliotek */
-  import { animate, stagger, inView, scroll } from "motion";
+    /* inView animation */
+    inView(".bidrag", () => {
+      animate(".bidrag", { x: [-2000, 0] }, { duration: 3 });
+    });
 
-  /* inView animation */
-  inView(".bidrag", () => {
-    animate(".bidrag", { x: [-2000, 0] }, { duration: 3 });
-  });
+    /* Stagger animation */
+    inView("#stagger", () => {
+      animate(
+        "#stagger li",
+        {
+          opacity: [0, 1],
+          transform: ["translateY(50px)", "translateY(0px)"],
+        },
+        {
+          delay: stagger(0.3, { start: 0.5 }), // fx 0.5s start delay og 0.3s mellemrum
+          duration: 0.6,
+          easing: "ease-out",
+          fill: "forwards",
+        }
+      );
+    });
 
-  /* Stagger animation */
-  inView("#stagger", () => {
-    animate(
-      "#stagger li",
-      {
-        opacity: [0, 1],
-        transform: ["translateY(50px)", "translateY(0px)"],
-      },
-      {
-        delay: stagger(0.3, { start: 0.5 }), // fx 0.5s start delay og 0.3s mellemrum
-        duration: 0.6,
-        easing: "ease-out",
-        fill: "forwards",
-      }
-    );
-  });
-
-  /* Parallax med tekstboks */
-  scroll(animate(".parallaxelement", { y: [50, 500] }), {
-    target: document.querySelector(".parallaxelement"),
-  });
-</script>
+    /* Parallax med tekstboks */
+    scroll(animate(".parallaxelement", { y: [50, 500] }), {
+      target: document.querySelector(".parallaxelement"),
+    });
+  </script>
+</MainLayout>
