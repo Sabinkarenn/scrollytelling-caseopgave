@@ -34,7 +34,7 @@ import facebook from "../assets/images/facebook.svg";
 <MainLayout title="#SINGLEUSESUCKS">
   <!-- Hero section -->
   <section class="text-center py-8">
-    <h1 class="text-9xl font-bold text-blue-900">#SINGLEUSESUCKS</h1>
+    <h1 class="text-9xl font-bold text-[#2B4872]">#SINGLEUSESUCKS</h1>
 
     <!-- Slider container -->
     <div
@@ -183,62 +183,58 @@ import facebook from "../assets/images/facebook.svg";
 
 <!-- Hvad gør de section  -->
 
-<section
-  class="bg-teal-100 mt-8 h-screen w-full bg-cover bg-center"
-  style="background-image: url('/plastic1.jpg');"
->
-  <h3 class="text-xl font-semibold">Vores danske indsats</h3>
-  <p class="parallaxelement w-3/4 mx-auto p-10 bg-slate-50 text-xl">
-    Plastic Change engagerer borgere, virksomheder og politikere for at reducere
-    plastikforurening:
-  </p>
-</section>
-
-<section class="relative py-20 px-4">
-  <div class="max-w-2xl mx-auto grid gap-12">
-    <!-- Vores danske indsats -->
-    <div class="bg-blue-900 text-white p-6 sm:p-8 rounded-md">
-      <h3 class="text-xl font-semibold">Vores danske indsats</h3>
-      <p class="mt-2 text-sm">
-        Plastic Change engagerer borgere, virksomheder og politikere for at
-        reducere plastikforurening:
-      </p>
-      <ul class="mt-4 text-sm space-y-2 list-disc list-inside">
-        <li>
-          <strong>Borgere –</strong> Oplysning og kampagner inspirerer til bæredygtige
-          valg.
-        </li>
-        <li>
-          <strong>Virksomheder –</strong> Partnerskaber skaber innovative løsninger
-          og fremmer cirkulær økonomi.
-        </li>
-        <li>
-          <strong>Politik –</strong> Vi påvirker lovgivning gennem aktiv deltagelse
-          i den politiske debat. Læs mere her.
-        </li>
-      </ul>
-    </div>
-
-    <!-- Vi påvirker global dagsorden -->
-    <div class="bg-white text-blue-900 p-6 sm:p-8 rounded-md">
-      <h3 class="text-xl font-semibold">Vi påvirker global dagsorden</h3>
-      <ul class="mt-4 text-sm space-y-2 list-disc list-inside">
-        <li>
-          <strong>EU –</strong> Vi samarbejder med EU for at styrke lovgivning om
-          plastikreduktion og genbrug.
-        </li>
-        <li>
-          <strong>Break Free From Plastic –</strong> Som styregruppemedlem samarbejder
-          vi med 3.000 miljøorganisationer om plastikforurening.
-        </li>
-        <li>
-          <strong>FN –</strong> Vi deltager i FN-forhandlinger for at sikre en global,
-          bindende aftale mod plastikforurening.
-        </li>
-      </ul>
+<article>
+  <!-- containeren -->
+  <div
+    class="sticky top-0 left-0 right-0 bottom-0 h-screen w-full bg-cover bg-center"
+    style="background-image: url('/plastic1.jpg')"
+  >
+  </div><!-- sticky elementet -->
+  <div class="relative flex justify-end">
+    <!-- relative elementet -->
+    <div class="flex flex-col w-full md:w-1/2 h-full justify-center gap-4 p-4">
+      <div class="bg-blue-900 text-white p-6 sm:p-8 rounded-md">
+        <h3 class="text-xl font-semibold">Vores danske indsats</h3>
+        <p class="mt-2 text-sm">
+          Plastic Change engagerer borgere, virksomheder og politikere for at
+          reducere plastikforurening:
+        </p>
+        <ul class="mt-4 text-sm space-y-2 list-disc list-inside">
+          <li>
+            <strong>Borgere –</strong> Oplysning og kampagner inspirerer til bæredygtige
+            valg.
+          </li>
+          <li>
+            <strong>Virksomheder –</strong> Partnerskaber skaber innovative løsninger
+            og fremmer cirkulær økonomi.
+          </li>
+          <li>
+            <strong>Politik –</strong> Vi påvirker lovgivning gennem aktiv deltagelse
+            i den politiske debat. Læs mere her.
+          </li>
+        </ul>
+      </div>
+      <div class="bg-white text-blue-900 p-6 sm:p-8 rounded-md">
+        <h3 class="text-xl font-semibold">Vi påvirker global dagsorden</h3>
+        <ul class="mt-4 text-sm space-y-2 list-disc list-inside">
+          <li>
+            <strong>EU –</strong> Vi samarbejder med EU for at styrke lovgivning
+            om plastikreduktion og genbrug.
+          </li>
+          <li>
+            <strong>Break Free From Plastic –</strong> Som styregruppemedlem samarbejder
+            vi med 3.000 miljøorganisationer om plastikforurening.
+          </li>
+          <li>
+            <strong>FN –</strong> Vi deltager i FN-forhandlinger for at sikre en
+            global, bindende aftale mod plastikforurening.
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
-</section>
+</article>
+<div class="h-[100vh]"></div><!-- afstandsstykket -->
 
 <!-- Banner -->
 
@@ -433,7 +429,10 @@ import facebook from "../assets/images/facebook.svg";
   inView("#stagger", () => {
     animate(
       "#stagger li",
-      { opacity: [0, 1], transform: ["translateY(50px)", "translateY(0px)"] },
+      {
+        opacity: [0, 1],
+        transform: ["translateY(50px)", "translateY(0px)"],
+      },
       {
         delay: stagger(0.3, { start: 0.5 }), // fx 0.5s start delay og 0.3s mellemrum
         duration: 0.6,
