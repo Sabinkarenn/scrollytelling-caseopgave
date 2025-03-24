@@ -33,3 +33,19 @@
 }
 @layer utilities {
 }
+
+/* Add this to your global styles (in your CSS file) */
+@keyframes fly-in-left {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.animate-fly-in-left {
+  animation: fly-in-left 1s ease-out forwards;
+}

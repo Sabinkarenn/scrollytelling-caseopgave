@@ -113,27 +113,24 @@ setInterval(switchImages, 2500);
     <div class="fixed bottom-10 left-1/2 transform -translate-x-1/2 z-50">
       <Button />
     </div>
-
-    <!-- Inforgrafik section -->
-    <section
-      class="grid grid-cols-1 md:grid-cols-2 gap-20 py-16 px-4 max-w-6xl mx-auto"
-    >
-      <Image src={infografik} alt="Infografik" class="w-full object-contain" />
+    
+    <section class="grid grid-cols-1 md:grid-cols-2 gap-20 py-16 px-4 max-w-6xl mx-auto">
+      <!-- Image with fly-in effect -->
+      <Image 
+        src={infografik} 
+        alt="Infografik" 
+        class="w-full object-contain animate-fly-in-left"
+      />
       <div class="text-[#2B4872] max-w-prose">
         <h2 class="text-3xl md:text-4xl m-4">MERE PLASTIK END NOGENSINDE</h2>
         <p class="text-m m-4">
-          Hvert år ender ca. 11 millioner tons plastik i havet, hvilket truer
-          klima, miljø og sundhed. Plastikproduktionen er steget fra 15 mio. ton
-          årligt i 1950’erne til ca. 460 mio. ton i 2019, hvoraf halvdelen er
-          engangsprodukter. <br />
-          <br />Den forventes at tredobles inden 2050 og blive den største
-          drivkraft for olieefterspørgslen ifølge IEA. <br />
-          <br />Plastik øger CO2-udledningen, forurener naturen og skader
-          dyrelivet. Det nedbrydes til mikroplast, som spredes i vand og luft og
-          optages i fødekæden med uforudsigelige konsekvenser.
+          Hvert år ender ca. 11 millioner tons plastik i havet, hvilket truer klima, miljø og sundhed. Plastikproduktionen er steget fra 15 mio. ton årligt i 1950’erne til ca. 460 mio. ton i 2019, hvoraf halvdelen er engangsprodukter. <br />
+          <br />Den forventes at tredobles inden 2050 og blive den største drivkraft for olieefterspørgslen ifølge IEA. <br />
+          <br />Plastik øger CO2-udledningen, forurener naturen og skader dyrelivet. Det nedbrydes til mikroplast, som spredes i vand og luft og optages i fødekæden med uforudsigelige konsekvenser.
         </p>
       </div>
     </section>
+    
 
     <!-- Info bokse -->
 
@@ -317,7 +314,7 @@ setInterval(switchImages, 2500);
         </div>
       </div>
     </article>
-    <div class="h-[100vh]"></div><!-- afstandsstykket -->
+    <div class="h-[10vh]"></div><!-- afstandsstykket -->
 
     <!-- Banner -->
 
