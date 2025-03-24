@@ -39,27 +39,75 @@ const group2 = [fish.src, sushi.src, lady.src];
   <section class="text-center py-8">
     <h1 class="text-8xl font-bold text-[#2B4872]">#SINGLEUSESUCKS</h1>
 
-    <!-- Slider container -->
-    <div
-      id="slider"
-      class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 mt-6 justify-center transition-opacity duration-300 opacity-100"
-    >
-      <Image
-        src={bottles}
-        alt="Plastic bottles"
-        class="w-full max-w-[280px] object-cover mx-auto"
-      />
-      <Image
-        src={world}
-        alt="Earth in plastic bag"
-        class="w-full max-w-[280px] object-cover mx-auto"
-      />
-      <Image
-        src={sea}
-        alt="Polluted water"
-        class="w-full max-w-[280px] object-cover mx-auto"
-      />
-    </div>
+   <!-- Slider container -->
+<div
+id="slider"
+class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 mt-6 justify-center transition-opacity duration-300 opacity-100"
+>
+<div class="gruppe_1">
+  <Image
+    id="bottles"
+    src={bottles}
+    alt="Plastic bottles"
+    class="w-full max-w-[280px] object-cover mx-auto"
+  />
+  <Image 
+    id="fish"
+    src={fish}
+    alt="fish"
+    class="hidden w-full max-w-[280px] object-cover mx-auto"
+  />
+</div>
+
+<div class="gruppe_2">
+  <Image
+    id="world"
+    src={world}
+    alt="Earth in plastic bag"
+    class="w-full max-w-[280px] object-cover mx-auto"
+  />
+  <Image 
+    id="sushi"
+    src={sushi}
+    alt="sushi"
+    class="hidden w-full max-w-[280px] object-cover mx-auto"
+  />
+</div>
+
+<div class="gruppe_3">
+  <Image
+    id="sea"
+    src={sea}
+    alt="Polluted water"
+    class="w-full max-w-[280px] object-cover mx-auto"
+  />
+  <Image 
+    id="lady"
+    src={lady}
+    alt="lady"
+    class="hidden w-full max-w-[280px] object-cover mx-auto"
+  />
+</div>
+</div>
+<script>
+   const switchImages = () => {
+  // Skift billeder i gruppe 1
+  const group1Images = document.querySelectorAll('.gruppe_1 img');
+  group1Images.forEach(img => img.classList.toggle('hidden'));
+
+  // Skift billeder i gruppe 2
+  const group2Images = document.querySelectorAll('.gruppe_2 img');
+  group2Images.forEach(img => img.classList.toggle('hidden'));
+
+  // Skift billeder i gruppe 3
+  const group3Images = document.querySelectorAll('.gruppe_3 img');
+  group3Images.forEach(img => img.classList.toggle('hidden'));
+};
+
+// Sæt interval for at skifte billeder hver 3. sekund (3000 ms)
+setInterval(switchImages, 2500);
+</script>
+
 
     <!-- Sticky Button -->
     <div class="fixed bottom-10 left-1/2 transform -translate-x-1/2 z-50">
@@ -481,5 +529,8 @@ const group2 = [fish.src, sushi.src, lady.src];
     scroll(animate(".parallaxelement", { y: [50, 500] }), {
       target: document.querySelector(".parallaxelement"),
     });
+
+
+    
   </script>
 </MainLayout>
