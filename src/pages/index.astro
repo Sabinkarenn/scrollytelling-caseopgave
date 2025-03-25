@@ -39,7 +39,7 @@ const group2 = [fish.src, sushi.src, lady.src];
   <section class="text-center py-8">
     <h1 class="text-8xl font-bold text-[#2B4872]">#SINGLEUSESUCKS</h1>
 
-   <!-- Slider container -->
+ <!-- Slider container -->
 <div
 id="slider"
 class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 mt-6 justify-center transition-opacity duration-300 opacity-100"
@@ -49,13 +49,13 @@ class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 mt-6 justify-center transi
     id="bottles"
     src={bottles}
     alt="Plastic bottles"
-    class="w-full max-w-[280px] object-cover mx-auto"
+    class="w-full max-w-[320px] h-[400px] object-cover mx-auto"
   />
   <Image 
     id="fish"
     src={fish}
     alt="fish"
-    class="hidden w-full max-w-[280px] object-cover mx-auto"
+    class="hidden w-full max-w-[320px] h-[400px] object-cover mx-auto"
   />
 </div>
 
@@ -64,13 +64,13 @@ class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 mt-6 justify-center transi
     id="world"
     src={world}
     alt="Earth in plastic bag"
-    class="w-full max-w-[280px] object-cover mx-auto"
+    class="w-full max-w-[320px] h-[400px] object-cover mx-auto"
   />
   <Image 
     id="sushi"
     src={sushi}
     alt="sushi"
-    class="hidden w-full max-w-[280px] object-cover mx-auto"
+    class="hidden w-full max-w-[320px] h-[400px] object-cover mx-auto"
   />
 </div>
 
@@ -79,16 +79,19 @@ class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 mt-6 justify-center transi
     id="sea"
     src={sea}
     alt="Polluted water"
-    class="w-full max-w-[280px] object-cover mx-auto"
+    class="w-full max-w-[320px] h-[400px] object-cover mx-auto"
   />
   <Image 
     id="lady"
     src={lady}
     alt="lady"
-    class="hidden w-full max-w-[280px] object-cover mx-auto"
+    class="hidden w-full max-w-[320px] h-[400px] object-cover mx-auto"
   />
 </div>
 </div>
+
+
+
 <script>
    const switchImages = () => {
   // Skift billeder i gruppe 1
@@ -110,8 +113,10 @@ setInterval(switchImages, 2500);
 
 
     <!-- Sticky Button -->
-    <div class="fixed bottom-10 left-1/2 transform -translate-x-1/2 z-50">
-      <Button />
+    <div class="fixed bottom-3 left-1/2 transform -translate-x-1/2 z-50">
+      <a href="#giv-et-bidrag">
+        <Button />
+      </a>
     </div>
     
     <section class="grid grid-cols-1 md:grid-cols-2 gap-20 py-16 px-4 max-w-6xl mx-auto">
@@ -135,31 +140,43 @@ setInterval(switchImages, 2500);
     <!-- Info bokse -->
 
     <section class="py-12 px-6">
-      <div class="grid grid-cols-1 md:grid-cols-3 justify-items-center">
-        <div
-          class="infoboks border-3 border-[#2B4872] overflow-hidden max-w-xs"
-        >
-          <Image src={skrald} alt="Skrald" class="w-full object-cover" />
+      <div class="grid grid-cols-1 md:grid-cols-3 justify-items-center gap-6">
+        <div class="infoboks border-3 border-[#2B4872] overflow-hidden max-w-xs">
+          <div class="overflow-hidden">
+            <Image
+              src={skrald}
+              alt="Skrald"
+              class="w-full object-cover transition-transform duration-300 hover:scale-110"
+            />
+          </div>
           <p class="p-4 text-m text-[#2B4872]">
             Plastik udleder store mængder CO2 gennem hele sin livscyklus og
             forværrer klimaforandringerne.
           </p>
         </div>
-
-        <div
-          class="infoboks border-3 border-[#2B4872] overflow-hidden max-w-xs"
-        >
-          <Image src={skilpadde} alt="Skilpadde" class="w-full object-cover" />
+    
+        <div class="infoboks border-3 border-[#2B4872] overflow-hidden max-w-xs">
+          <div class="overflow-hidden">
+            <Image
+              src={skilpadde}
+              alt="Skilpadde"
+              class="w-full object-cover transition-transform duration-300 hover:scale-110"
+            />
+          </div>
           <p class="p-4 text-m text-[#2B4872]">
-            Millioner af tons plastik truer dyreliv, økosystemer og landbrug,
-            hvor det skaber mikroplast i jord og vand.
+            Millioner af tons plastik truer dyreliv, økosystemer og landbrug, hvor
+            det skaber mikroplast i jord og vand.
           </p>
         </div>
-
-        <div
-          class="infoboks border-3 border-[#2B4872] overflow-hidden max-w-xs"
-        >
-          <Image src={plastic} alt="Plastic" class="w-full object-cover" />
+    
+        <div class="infoboks border-3 border-[#2B4872] overflow-hidden max-w-xs">
+          <div class="overflow-hidden">
+            <Image
+              src={plastic}
+              alt="Plastic"
+              class="w-full object-cover transition-transform duration-300 hover:scale-110"
+            />
+          </div>
           <p class="p-4 text-m text-[#2B4872]">
             Vi indtager mikroplast, som kan indeholde skadelige stoffer og øge
             sundhedsrisici.
@@ -167,6 +184,7 @@ setInterval(switchImages, 2500);
         </div>
       </div>
     </section>
+    
 
     <!-- Banner -->
 
@@ -325,6 +343,7 @@ setInterval(switchImages, 2500);
     <!-- Giv et bidrag form Section -->
 
     <section
+    id="giv-et-bidrag"
       class="bidrag mt-9 max-w-lg mx-auto p-8 border-2 border-gray-400 rounded-lg bg-cream"
     >
       <h2 class="text-2xl font-semibold text-center text-dark-blue">
