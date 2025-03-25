@@ -34,7 +34,6 @@
 @layer utilities {
 }
 
-/* Add this to your global styles (in your CSS file) */
 @keyframes fly-in-left {
   0% {
     transform: translateX(-100%);
@@ -46,6 +45,14 @@
   }
 }
 
+.hidden-before-scroll {
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: opacity 0.5s ease-out, transform 1s ease-out;
+}
+
 .animate-fly-in-left {
+  opacity: 1;
+  transform: translateX(0);
   animation: fly-in-left 1s ease-out forwards;
 }

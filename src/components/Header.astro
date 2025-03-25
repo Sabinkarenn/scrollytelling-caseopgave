@@ -4,63 +4,38 @@ import Link from "../components/Link.astro";
 import { useState } from "react";
 ---
 
-<header class="border-b-3 border-[#2B4872] py-5 px-6 lg:px-0 relative z-20">
-  <div class="container mx-auto flex justify-between items-center relative">
+<header class="border-b-3 border-[#2B4872] py-5 px-6 lg:px-0 relative z-20 bg-cream">
+  <div class="container mx-auto flex justify-between items-center">
     <!-- Logo -->
-    <div></div>
+    <div class="flex items-center">
+      <img src="/logo.svg" alt="Logo" class="h-10" />
+    </div>
 
     <!-- Navigation -->
-    <div class="container mx-auto flex justify-between items-center relative">
-      <nav
-        class="flex flex-1 justify-end items-center space-x-9 text-[#2B4872]"
-      >
-        <a href="#vaer-med" class="scroll-link">Vær med</a>
-        <a href="#shop" class="scroll-link">Shop</a>
-        <a href="#om-os" class="scroll-link">Om os</a>
-        <Button />
+    <nav class="hidden lg:flex items-center space-x-9 text-[#2B4872]">
+      <a href="#vaer-med" class="scroll-link hover:text-orange-500 transition">Vær med</a>
+      <a href="#shop" class="scroll-link hover:text-orange-500 transition">Shop</a>
+      <a href="#om-os" class="scroll-link hover:text-orange-500 transition">Om os</a>
+      <Button />
+    </nav>
 
-        <!-- Burger menu til mobil -->
-        <button id="menu-toggle" class="lg:hidden flex flex-col space-y-1">
-          <span class="w-6 h-0.5 bg-black"></span>
-          <span class="w-6 h-0.5 bg-black"></span>
-          <span class="w-6 h-0.5 bg-black"></span>
-        </button>
-      </nav>
-
-      <script>
-        document.addEventListener("DOMContentLoaded", function () {
-          const menuToggle = document.getElementById("menu-toggle");
-          const closeMenu = document.getElementById("close-menu");
-          const menu = document.getElementById("mobile-menu");
-
-          // Åbner og lukker mobilmenu
-          menuToggle.addEventListener("click", function () {
-            menu.classList.remove("translate-x-full");
-          });
-
-          closeMenu.addEventListener("click", function () {
-            menu.classList.add("translate-x-full");
-          });
-
-          // Smooth scroll funktion
-          document.querySelectorAll(".scroll-link").forEach((link) => {
-            link.addEventListener("click", function (e) {
-              e.preventDefault();
-              const targetId = this.getAttribute("href").substring(1);
-              const targetElement = document.querySelector(
-                `#${targetId} .scroll-target`
-              );
-
-              if (targetElement) {
-                window.scrollTo({
-                  top: targetElement.offsetTop - 80, // Justerer så header ikke dækker
-                  behavior: "smooth",
-                });
-              }
-            });
-          });
-        });
-      </script>
-    </div>
+    <!-- Mobilmenu -->
+    <button id="menu-toggle" class="lg:hidden flex flex-col space-y-1">
+      <span class="w-6 h-0.5 bg-[#2B4872]"></span>
+      <span class="w-6 h-0.5 bg-[#2B4872]"></span>
+      <span class="w-6 h-0.5 bg-[#2B4872]"></span>
+    </button>
   </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const menuToggle = document.getElementById("menu-toggle");
+      const menu = document.getElementById("mobile-menu");
+
+      menuToggle.addEventListener("click", function () {
+        menu.classList.toggle("translate-x-full");
+      });
+    });
+  </script>
 </header>
+
