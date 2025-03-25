@@ -37,7 +37,13 @@ const group2 = [fish.src, sushi.src, lady.src];
 <MainLayout title="#SINGLEUSESUCKS">
   <!-- Hero section -->
   <section class="text-center py-8">
-    <h1 class="text-8xl font-bold text-[#2B4872]">#SINGLEUSESUCKS</h1>
+  
+    <h1 class="text-7xl font-bold text-[#2B4872]">#SINGLEUSESUCKS</h1>
+
+<p class="mt-4 text-lg text-gray-500 max-w-2xl mx-auto leading-tight">
+  Plastikforurening truer vores hav, klima og sundhed. Hvert år ender millioner af tons engangsplast i naturen – 
+  Gør en forskel og sig nej til engangsplastik!
+</p>
 
  <!-- Slider container -->
 <div
@@ -165,8 +171,8 @@ setInterval(switchImages, 2500);
     <!-- Info bokse -->
 
     <section class="py-12 px-6">
-      <div class="grid grid-cols-1 md:grid-cols-3 justify-items-center gap-6">
-        <div class="infoboks border-3 border-[#2B4872] overflow-hidden max-w-xs">
+      <div class="grid grid-cols-1 md:grid-cols-3 justify-items-center gap-6 group">
+        <div class="infoboks border-3 border-[#2B4872] overflow-hidden max-w-xs transition-all duration-300 group-hover:scale-[0.9] hover:scale-105">
           <div class="overflow-hidden">
             <Image
               src={skrald}
@@ -174,13 +180,12 @@ setInterval(switchImages, 2500);
               class="w-full object-cover transition-transform duration-300 hover:scale-110"
             />
           </div>
-          <p class="p-4 text-m text-[#2B4872]">
-            Plastik udleder store mængder CO2 gennem hele sin livscyklus og
-            forværrer klimaforandringerne.
+          <p class="p-4 text-m text-[#2B4872] transition-transform duration-300 group-hover:scale-[0.9] hover:scale-110">
+            Plastik udleder store mængder CO2 gennem hele sin livscyklus og forværrer klimaforandringerne.
           </p>
         </div>
     
-        <div class="infoboks border-3 border-[#2B4872] overflow-hidden max-w-xs">
+        <div class="infoboks border-3 border-[#2B4872] overflow-hidden max-w-xs transition-all duration-300 group-hover:scale-[0.9] hover:scale-105">
           <div class="overflow-hidden">
             <Image
               src={skilpadde}
@@ -188,13 +193,12 @@ setInterval(switchImages, 2500);
               class="w-full object-cover transition-transform duration-300 hover:scale-110"
             />
           </div>
-          <p class="p-4 text-m text-[#2B4872]">
-            Millioner af tons plastik truer dyreliv, økosystemer og landbrug, hvor
-            det skaber mikroplast i jord og vand.
+          <p class="p-4 text-m text-[#2B4872] transition-transform duration-300 group-hover:scale-[0.9] hover:scale-110">
+            Millioner af tons plastik truer dyreliv, økosystemer og landbrug, hvor det skaber mikroplast i jord og vand.
           </p>
         </div>
     
-        <div class="infoboks border-3 border-[#2B4872] overflow-hidden max-w-xs">
+        <div class="infoboks border-3 border-[#2B4872] overflow-hidden max-w-xs transition-all duration-300 group-hover:scale-[0.9] hover:scale-105">
           <div class="overflow-hidden">
             <Image
               src={plastic}
@@ -202,13 +206,13 @@ setInterval(switchImages, 2500);
               class="w-full object-cover transition-transform duration-300 hover:scale-110"
             />
           </div>
-          <p class="p-4 text-m text-[#2B4872]">
-            Vi indtager mikroplast, som kan indeholde skadelige stoffer og øge
-            sundhedsrisici.
+          <p class="p-4 text-m text-[#2B4872] transition-transform duration-300 group-hover:scale-[0.9] hover:scale-110">
+            Vi indtager mikroplast, som kan indeholde skadelige stoffer og øge sundhedsrisici.
           </p>
         </div>
       </div>
     </section>
+    
     
 
     <!-- Banner -->
