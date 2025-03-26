@@ -1,14 +1,14 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import { Image } from "astro:assets";
-import sea from "../assets/images/sea.jpg";
-import world from "../assets/images/world.jpg";
-import bottles from "../assets/images/bottles.jpg";
+import sea from "../assets/images/sea.webp";
+import world from "../assets/images/world.webp";
+import bottles from "../assets/images/bottles.webp";
 import infografik from "../assets/images/infografik.svg";
-import skrald from "../assets/images/skrald.jpg";
-import skilpadde from "../assets/images/skilpadde.jpg";
-import plastic from "../assets/images/plastik3.jpg";
-import water from "../assets/images/water.jpg";
+import skrald from "../assets/images/skrald.webp";
+import skilpadde from "../assets/images/skilpadde.webp";
+import plastic from "../assets/images/plastik3.webp";
+import water from "../assets/images/water.webp";
 import bottle from "../assets/images/bottle.svg";
 import indkøb from "../assets/images/indkøb.svg";
 import milk from "../assets/images/milk.svg";
@@ -16,17 +16,17 @@ import pants from "../assets/images/pants.svg";
 import party from "../assets/images/party.svg";
 import product from "../assets/images/product.svg";
 import toilet from "../assets/images/toilet.svg";
-import lady from "../assets/images/lady.jpg";
-import sushi from "../assets/images/sushi.jpg";
-import fish from "../assets/images/fish.jpg";
+import lady from "../assets/images/lady.webp";
+import sushi from "../assets/images/sushi.webp";
+import fish from "../assets/images/fish.webp";
 import Button from "../components/Button.astro";
 import Banner from "../components/Banner.astro";
-import some1 from "../assets/images/some1.jpg";
-import some2 from "../assets/images/some2.jpg";
-import some3 from "../assets/images/some3.png";
-import some4 from "../assets/images/some4.png";
-import some5 from "../assets/images/some5.png";
-import some6 from "../assets/images/some6.png";
+import some1 from "../assets/images/some1.webp";
+import some2 from "../assets/images/some2.webp";
+import some3 from "../assets/images/some3.webp";
+import some4 from "../assets/images/some4.webp";
+import some5 from "../assets/images/some5.webp";
+import some6 from "../assets/images/some6.webp";
 import instagram from "../assets/images/instagram.svg";
 import facebook from "../assets/images/facebook.svg";
 
@@ -37,86 +37,83 @@ const group2 = [fish.src, sushi.src, lady.src];
 <MainLayout title="#SINGLEUSESUCKS">
   <!-- Hero section -->
   <section class="text-center py-8">
-  
     <h1 class="text-7xl font-bold text-[#2B4872]">#SINGLEUSESUCKS</h1>
 
-<p class="mt-4 text-lg text-gray-500 max-w-2xl mx-auto leading-tight">
-  Plastikforurening truer vores hav, klima og sundhed. Hvert år ender millioner af tons engangsplast i naturen – 
-  Gør en forskel og sig nej til engangsplastik!
-</p>
+    <p class="mt-4 text-lg text-gray-500 max-w-2xl mx-auto leading-tight">
+      Plastikforurening truer vores hav, klima og sundhed. Hvert år ender
+      millioner af tons engangsplast i naturen – Gør en forskel og sig nej til
+      engangsplastik!
+    </p>
 
- <!-- Slider container -->
-<div
-id="slider"
-class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 mt-6 justify-center transition-opacity duration-300 opacity-100"
->
-<div class="gruppe_1">
-  <Image
-    id="bottles"
-    src={bottles}
-    alt="Plastic bottles"
-    class="w-full max-w-[320px] h-[400px] object-cover mx-auto"
-  />
-  <Image 
-    id="fish"
-    src={fish}
-    alt="fish"
-    class="hidden w-full max-w-[320px] h-[400px] object-cover mx-auto"
-  />
-</div>
+    <!-- Slider container -->
+    <div
+      id="slider"
+      class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 mt-6 justify-center transition-opacity duration-300 opacity-100"
+    >
+      <div class="gruppe_1">
+        <Image
+          id="bottles"
+          src={bottles}
+          alt="Plastic bottles"
+          class="w-full max-w-[320px] h-[400px] object-cover mx-auto"
+        />
+        <Image
+          id="fish"
+          src={fish}
+          alt="fish"
+          class="hidden w-full max-w-[320px] h-[400px] object-cover mx-auto"
+        />
+      </div>
 
-<div class="gruppe_2">
-  <Image
-    id="world"
-    src={world}
-    alt="Earth in plastic bag"
-    class="w-full max-w-[320px] h-[400px] object-cover mx-auto"
-  />
-  <Image 
-    id="sushi"
-    src={sushi}
-    alt="sushi"
-    class="hidden w-full max-w-[320px] h-[400px] object-cover mx-auto"
-  />
-</div>
+      <div class="gruppe_2">
+        <Image
+          id="world"
+          src={world}
+          alt="Earth in plastic bag"
+          class="w-full max-w-[320px] h-[400px] object-cover mx-auto"
+        />
+        <Image
+          id="sushi"
+          src={sushi}
+          alt="sushi"
+          class="hidden w-full max-w-[320px] h-[400px] object-cover mx-auto"
+        />
+      </div>
 
-<div class="gruppe_3">
-  <Image
-    id="sea"
-    src={sea}
-    alt="Polluted water"
-    class="w-full max-w-[320px] h-[400px] object-cover mx-auto"
-  />
-  <Image 
-    id="lady"
-    src={lady}
-    alt="lady"
-    class="hidden w-full max-w-[320px] h-[400px] object-cover mx-auto"
-  />
-</div>
-</div>
+      <div class="gruppe_3">
+        <Image
+          id="sea"
+          src={sea}
+          alt="Polluted water"
+          class="w-full max-w-[320px] h-[400px] object-cover mx-auto"
+        />
+        <Image
+          id="lady"
+          src={lady}
+          alt="lady"
+          class="hidden w-full max-w-[320px] h-[400px] object-cover mx-auto"
+        />
+      </div>
+    </div>
 
+    <script>
+      const switchImages = () => {
+        // Skift billeder i gruppe 1
+        const group1Images = document.querySelectorAll(".gruppe_1 img");
+        group1Images.forEach((img) => img.classList.toggle("hidden"));
 
+        // Skift billeder i gruppe 2
+        const group2Images = document.querySelectorAll(".gruppe_2 img");
+        group2Images.forEach((img) => img.classList.toggle("hidden"));
 
-<script>
-   const switchImages = () => {
-  // Skift billeder i gruppe 1
-  const group1Images = document.querySelectorAll('.gruppe_1 img');
-  group1Images.forEach(img => img.classList.toggle('hidden'));
+        // Skift billeder i gruppe 3
+        const group3Images = document.querySelectorAll(".gruppe_3 img");
+        group3Images.forEach((img) => img.classList.toggle("hidden"));
+      };
 
-  // Skift billeder i gruppe 2
-  const group2Images = document.querySelectorAll('.gruppe_2 img');
-  group2Images.forEach(img => img.classList.toggle('hidden'));
-
-  // Skift billeder i gruppe 3
-  const group3Images = document.querySelectorAll('.gruppe_3 img');
-  group3Images.forEach(img => img.classList.toggle('hidden'));
-};
-
-// Sæt interval for at skifte billeder hver 3. sekund (3000 ms)
-setInterval(switchImages, 2500);
-</script>
-
+      // Sæt interval for at skifte billeder hver 3. sekund (3000 ms)
+      setInterval(switchImages, 2500);
+    </script>
 
     <!-- Sticky Button -->
     <div class="fixed bottom-3 left-1/2 transform -translate-x-1/2 z-50">
@@ -124,55 +121,64 @@ setInterval(switchImages, 2500);
         <Button />
       </a>
     </div>
-    
-    <section class="grid grid-cols-1 md:grid-cols-2 gap-20 py-16 px-4 max-w-6xl mx-auto">
+
+    <section
+      class="grid grid-cols-1 md:grid-cols-2 gap-20 py-16 px-4 max-w-6xl mx-auto"
+    >
       <!-- Image with fly-in effect -->
-      <Image 
-        src={infografik} 
-        alt="Infografik" 
+      <Image
+        src={infografik}
+        alt="Infografik"
         class="w-full object-contain hidden-before-scroll"
       />
       <div class="text-[#2B4872] max-w-prose">
         <h2 class="text-3xl md:text-4xl m-4">MERE PLASTIK END NOGENSINDE</h2>
         <p class="text-m m-4">
-          Hvert år ender ca. 11 millioner tons plastik i havet, hvilket truer klima, miljø og sundhed. Plastikproduktionen er steget fra 15 mio. ton årligt i 1950’erne til ca. 460 mio. ton i 2019, hvoraf halvdelen er engangsprodukter. <br />
-          <br />Den forventes at tredobles inden 2050 og blive den største drivkraft for olieefterspørgslen ifølge IEA. <br />
-          <br />Plastik øger CO2-udledningen, forurener naturen og skader dyrelivet. Det nedbrydes til mikroplast, som spredes i vand og luft og optages i fødekæden med uforudsigelige konsekvenser.
+          Hvert år ender ca. 11 millioner tons plastik i havet, hvilket truer
+          klima, miljø og sundhed. Plastikproduktionen er steget fra 15 mio. ton
+          årligt i 1950’erne til ca. 460 mio. ton i 2019, hvoraf halvdelen er
+          engangsprodukter. <br />
+          <br />Den forventes at tredobles inden 2050 og blive den største
+          drivkraft for olieefterspørgslen ifølge IEA. <br />
+          <br />Plastik øger CO2-udledningen, forurener naturen og skader
+          dyrelivet. Det nedbrydes til mikroplast, som spredes i vand og luft og
+          optages i fødekæden med uforudsigelige konsekvenser.
         </p>
       </div>
     </section>
-    
 
     <script>
-   document.addEventListener("DOMContentLoaded", function () {
-  const image = document.querySelector(".hidden-before-scroll");
+      document.addEventListener("DOMContentLoaded", function () {
+        const image = document.querySelector(".hidden-before-scroll");
 
-  if (!image) return; // Sikrer, at der ikke sker fejl, hvis billedet mangler
+        if (!image) return; // Sikrer, at der ikke sker fejl, hvis billedet mangler
 
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          image.classList.remove("hidden-before-scroll");
-          image.classList.add("animate-fly-in-left");
-          observer.unobserve(image); // Stopper observering efter animationen kører
-        }
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                image.classList.remove("hidden-before-scroll");
+                image.classList.add("animate-fly-in-left");
+                observer.unobserve(image); // Stopper observering efter animationen kører
+              }
+            });
+          },
+          { threshold: 0.3 }
+        );
+
+        observer.observe(image);
       });
-    },
-    { threshold: 0.3 }
-  );
-
-  observer.observe(image);
-});
-
     </script>
-    
 
     <!-- Info bokse -->
 
     <section class="py-12 px-6">
-      <div class="grid grid-cols-1 md:grid-cols-3 justify-items-center gap-6 group">
-        <div class="infoboks border-3 border-[#2B4872] overflow-hidden max-w-xs transition-all duration-300 group-hover:scale-[0.9] hover:scale-105">
+      <div
+        class="grid grid-cols-1 md:grid-cols-3 justify-items-center gap-6 group"
+      >
+        <div
+          class="infoboks border-3 border-[#2B4872] overflow-hidden max-w-xs transition-all duration-300 group-hover:scale-[0.9] hover:scale-105"
+        >
           <div class="overflow-hidden">
             <Image
               src={skrald}
@@ -180,12 +186,17 @@ setInterval(switchImages, 2500);
               class="w-full object-cover transition-transform duration-300 hover:scale-110"
             />
           </div>
-          <p class="p-4 text-m text-[#2B4872] transition-transform duration-300 group-hover:scale-[0.9] hover:scale-110">
-            Plastik udleder store mængder CO2 gennem hele sin livscyklus og forværrer klimaforandringerne.
+          <p
+            class="p-4 text-m text-[#2B4872] transition-transform duration-300 group-hover:scale-[0.9] hover:scale-110"
+          >
+            Plastik udleder store mængder CO2 gennem hele sin livscyklus og
+            forværrer klimaforandringerne.
           </p>
         </div>
-    
-        <div class="infoboks border-3 border-[#2B4872] overflow-hidden max-w-xs transition-all duration-300 group-hover:scale-[0.9] hover:scale-105">
+
+        <div
+          class="infoboks border-3 border-[#2B4872] overflow-hidden max-w-xs transition-all duration-300 group-hover:scale-[0.9] hover:scale-105"
+        >
           <div class="overflow-hidden">
             <Image
               src={skilpadde}
@@ -193,12 +204,17 @@ setInterval(switchImages, 2500);
               class="w-full object-cover transition-transform duration-300 hover:scale-110"
             />
           </div>
-          <p class="p-4 text-m text-[#2B4872] transition-transform duration-300 group-hover:scale-[0.9] hover:scale-110">
-            Millioner af tons plastik truer dyreliv, økosystemer og landbrug, hvor det skaber mikroplast i jord og vand.
+          <p
+            class="p-4 text-m text-[#2B4872] transition-transform duration-300 group-hover:scale-[0.9] hover:scale-110"
+          >
+            Millioner af tons plastik truer dyreliv, økosystemer og landbrug,
+            hvor det skaber mikroplast i jord og vand.
           </p>
         </div>
-    
-        <div class="infoboks border-3 border-[#2B4872] overflow-hidden max-w-xs transition-all duration-300 group-hover:scale-[0.9] hover:scale-105">
+
+        <div
+          class="infoboks border-3 border-[#2B4872] overflow-hidden max-w-xs transition-all duration-300 group-hover:scale-[0.9] hover:scale-105"
+        >
           <div class="overflow-hidden">
             <Image
               src={plastic}
@@ -206,14 +222,15 @@ setInterval(switchImages, 2500);
               class="w-full object-cover transition-transform duration-300 hover:scale-110"
             />
           </div>
-          <p class="p-4 text-m text-[#2B4872] transition-transform duration-300 group-hover:scale-[0.9] hover:scale-110">
-            Vi indtager mikroplast, som kan indeholde skadelige stoffer og øge sundhedsrisici.
+          <p
+            class="p-4 text-m text-[#2B4872] transition-transform duration-300 group-hover:scale-[0.9] hover:scale-110"
+          >
+            Vi indtager mikroplast, som kan indeholde skadelige stoffer og øge
+            sundhedsrisici.
           </p>
         </div>
       </div>
     </section>
-    
-    
 
     <!-- Banner -->
 
@@ -371,74 +388,94 @@ setInterval(switchImages, 2500);
 
     <!-- Giv et bidrag form Section -->
     <section
-    id="giv-et-bidrag"
-    class="bidrag mt-9 max-w-lg mx-auto p-8 border-2 border-gray-400 rounded-lg bg-cream"
-  >
-    <h2 class="text-2xl font-semibold text-center text-dark-blue">
-      STØT MED ET BIDRAG
-    </h2>
-    <p class="text-center text-gray-600 mb-4">- Vær med til at gøre en forskel</p>
-  
-    <form class="space-y-6">
-      <!-- Navn -->
-      <div>
-        <label class="font-semibold text-dark-blue block mb-1" for="name">
-          For- og efternavn
-        </label>
-        <div class="relative">
-          <span class="absolute left-3 top-1/2 transform -translate-y-1/2 text-orange-500">👤</span>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            placeholder="Anne Jensen"
-            class="w-full pl-10 p-3 border border-gray-300 rounded-md"
-          />
-        </div>
-      </div>
-  
-      <!-- Email -->
-      <div>
-        <label class="font-semibold text-dark-blue block mb-1" for="email">
-          Email
-        </label>
-        <div class="relative">
-          <span class="absolute left-3 top-1/2 transform -translate-y-1/2 text-orange-500">📧</span>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            placeholder="annejensen@mail.dk"
-            class="w-full pl-10 p-3 border border-gray-300 rounded-md"
-          />
-        </div>
-      </div>
-  
-      <!-- Betalingsmetode -->
-      <div>
-        <label class="font-semibold text-dark-blue block mb-2">Betalingsmetode</label>
-        <div class="flex flex-col space-y-2">
-          <label class="flex items-center space-x-2">
-            <input type="radio" name="payment" value="mobilepay" class="accent-orange-500" />
-            <span>MobilePay</span>
+      id="giv-et-bidrag"
+      class="bidrag mt-9 max-w-lg mx-auto p-8 border-2 border-gray-400 rounded-lg bg-cream"
+    >
+      <h2 class="text-2xl font-semibold text-center text-dark-blue">
+        STØT MED ET BIDRAG
+      </h2>
+      <p class="text-center text-gray-600 mb-4">
+        - Vær med til at gøre en forskel
+      </p>
+
+      <form class="space-y-6">
+        <!-- Navn -->
+        <div>
+          <label class="font-semibold text-dark-blue block mb-1" for="name">
+            For- og efternavn
           </label>
-          <label class="flex items-center space-x-2">
-            <input type="radio" name="payment" value="card" class="accent-orange-500" />
-            <span>Kortbetaling</span>
-          </label>
+          <div class="relative">
+            <span
+              class="absolute left-3 top-1/2 transform -translate-y-1/2 text-orange-500"
+              >👤</span
+            >
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Anne Jensen"
+              class="w-full pl-10 p-3 border border-gray-300 rounded-md"
+            />
+          </div>
         </div>
-      </div>
-  
-      <!-- Knap -->
-      <button
-        type="submit"
-        class="w-full bg-orange-500 text-white font-semibold py-3 rounded-md hover:bg-orange-600 transition"
-      >
-        BIDRAG
-      </button>
-    </form>
-  </section>
-  
+
+        <!-- Email -->
+        <div>
+          <label class="font-semibold text-dark-blue block mb-1" for="email">
+            Email
+          </label>
+          <div class="relative">
+            <span
+              class="absolute left-3 top-1/2 transform -translate-y-1/2 text-orange-500"
+              >📧</span
+            >
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="annejensen@mail.dk"
+              class="w-full pl-10 p-3 border border-gray-300 rounded-md"
+            />
+          </div>
+        </div>
+
+        <!-- Betalingsmetode -->
+        <div>
+          <label class="font-semibold text-dark-blue block mb-2"
+            >Betalingsmetode</label
+          >
+          <div class="flex flex-col space-y-2">
+            <label class="flex items-center space-x-2">
+              <input
+                type="radio"
+                name="payment"
+                value="mobilepay"
+                class="accent-orange-500"
+              />
+              <span>MobilePay</span>
+            </label>
+            <label class="flex items-center space-x-2">
+              <input
+                type="radio"
+                name="payment"
+                value="card"
+                class="accent-orange-500"
+              />
+              <span>Kortbetaling</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Knap -->
+        <button
+          type="submit"
+          class="w-full bg-orange-500 text-white font-semibold py-3 rounded-md hover:bg-orange-600 transition"
+        >
+          BIDRAG
+        </button>
+      </form>
+    </section>
+
     <section
       class="relative w-full h-[400px] grid place-items-center bg-cover bg-center mt-16"
       style={`background-image: url(${water.src})`}
@@ -571,8 +608,5 @@ setInterval(switchImages, 2500);
     scroll(animate(".parallaxelement", { y: [50, 500] }), {
       target: document.querySelector(".parallaxelement"),
     });
-
-
-    
   </script>
 </MainLayout>
