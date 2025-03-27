@@ -12,20 +12,29 @@
     <div
       class="flex flex-col md:flex-row md:justify-between items-start md:items-center"
     >
-      <!-- Nyhedsbrev -->
-      <div class="w-full md:w-2/3">
-        <p class="text-black mb-2">Tilmeld dig vores nyhedsbrev</p>
-        <div class="flex">
-          <input
-            type="email"
-            placeholder="Email adresse"
-            class="border border-[#2B4872] p-2 w-full rounded-md"
-          />
-          <button class="bg-[#EA641B] text-white px-6 py-2 rounded-md ml-2">
-            Tilmeld
-          </button>
-        </div>
-      </div>
+     <!-- Nyhedsbrev -->
+<div class="w-full md:w-2/3">
+  <p class="text-black mb-2">Tilmeld dig vores nyhedsbrev</p>
+  <div class="flex flex-col">
+    <label for="newsletter-email" class="sr-only">Email adresse</label>
+    <div class="flex">
+      <input
+        type="email"
+        id="newsletter-email"
+        placeholder="Email adresse"
+        class="border border-[#2B4872] p-2 w-full rounded-md"
+        aria-describedby="newsletter-description"
+      />
+      <button class="bg-[#EA641B] text-white px-6 py-2 rounded-md ml-2">
+        Tilmeld
+      </button>
+    </div>
+    <p id="newsletter-description" class="sr-only">
+      Indtast din email for at tilmelde dig vores nyhedsbrev.
+    </p>
+  </div>
+</div>
+
 
       <!-- Kontaktinfo -->
       <div class="mt-6 md:mt-0 text-black text-sm">

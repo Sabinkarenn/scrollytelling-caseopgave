@@ -11,7 +11,7 @@ import { useState } from "react";
       <img src="/logo.svg" alt="Logo" class="h-10" />
     </div>
 
-    <!-- Navigation -->
+    <!-- Navigation (Desktop) -->
     <nav class="hidden lg:flex items-center space-x-9 text-[#2B4872]">
       <a href="#vaer-med" class="scroll-link hover:text-orange-500 transition">Vær med</a>
       <a href="#shop" class="scroll-link hover:text-orange-500 transition">Shop</a>
@@ -19,14 +19,29 @@ import { useState } from "react";
       <Button />
     </nav>
 
-
-    <!-- Mobilmenu -->
-    <button id="menu-toggle" class="lg:hidden flex flex-col space-y-1">
-      <span class="w-6 h-0.5 bg-[#2B4872]"></span>
-      <span class="w-6 h-0.5 bg-[#2B4872]"></span>
-      <span class="w-6 h-0.5 bg-[#2B4872]"></span>
+    <!-- Mobilmenu-knap -->
+    <button 
+      id="menu-toggle" 
+      class="lg:hidden flex flex-col space-y-1 relative z-50 p-2"
+      aria-expanded="false"
+      aria-controls="mobile-menu"
+    >
+      <span class="w-6 h-0.5 bg-[#2B4872] transition"></span>
+      <span class="w-6 h-0.5 bg-[#2B4872] transition"></span>
+      <span class="w-6 h-0.5 bg-[#2B4872] transition"></span>
     </button>
   </div>
+
+  <!-- Mobilmenu (Starter skjult) -->
+  <nav 
+    id="mobile-menu" 
+    class="fixed top-0 right-0 w-64 h-full bg-white shadow-lg transform translate-x-full transition-transform duration-300 lg:hidden flex flex-col space-y-4 p-6 z-40"
+  >
+    <a href="#vaer-med" class="scroll-link text-[#2B4872] hover:text-orange-500 transition">Vær med</a>
+    <a href="#shop" class="scroll-link text-[#2B4872] hover:text-orange-500 transition">Shop</a>
+    <a href="#om-os" class="scroll-link text-[#2B4872] hover:text-orange-500 transition">Om os</a>
+    <Button />
+  </nav>
 
   <script>
     document.addEventListener("DOMContentLoaded", function () {
@@ -34,9 +49,26 @@ import { useState } from "react";
       const menu = document.getElementById("mobile-menu");
 
       menuToggle.addEventListener("click", function () {
+        const isOpen = menu.classList.contains("translate-x-0");
+
+        // Toggle menu åben/lukket
+        menu.classList.toggle("translate-x-0");
         menu.classList.toggle("translate-x-full");
+
+        // Opdater aria-attributten
+        menuToggle.setAttribute("aria-expanded", !isOpen);
+      });
+
+      // Luk menuen hvis man klikker udenfor den
+      document.addEventListener("click", function (event) {
+        if (!menu.contains(event.target) && !menuToggle.contains(event.target)) {
+          menu.classList.add("translate-x-full");
+          menu.classList.remove("translate-x-0");
+          menuToggle.setAttribute("aria-expanded", "false");
+        }
       });
     });
   </script>
 </header>
+
 
